@@ -4,8 +4,7 @@ name: Update README with Template Variables
 on:
   push:
     paths:
-      - 'README.template.md'
-      - 'docs/README-TR.template.md'
+      - '**.template.md'
       - '.github/workflows/update-readme.yml'
       - 'files/scripts/generate-readmes.sh'
       - 'files/scripts/git-check-and-push.sh'
