@@ -25,6 +25,7 @@ concurrency:
 jobs:
   recipes:
     name: create-recipe-matrix
+    if: ${{ !contains(github.actor, '[bot]') || github.actor == 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
