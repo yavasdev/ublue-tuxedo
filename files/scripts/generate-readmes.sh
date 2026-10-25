@@ -7,12 +7,10 @@ set -euo pipefail
 
 # Define as many placeholders and their replacements as needed.
 declare -A REPLACEMENTS=(
-    ["{{BADGE_URL}}"]="https://ghcr-badge.egpl.dev/yavasdev"
-    ["{{BADGE_PARAMS}}"]="tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3"
-    
-    # Examples of other variables you might add later (KISS - add as needed):
-    # ["{{REPO_NAME}}"]="ublue-tuxedo"
-    # ["{{AUTHOR}}"]="yavasdev"
+    ["{{BADGE_URL}}"]="https://ghcr-badge.egpl.dev"
+    ["{{AUTHOR}}"]="yavasdev"
+    ["{{REPO_NAME}}"]="ublue-tuxedo"
+    ["{{TAGS}}"]="tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3"
 )
 
 # List of template files to process
@@ -59,6 +57,12 @@ for template in "${TEMPLATES[@]}"; do
         sed -e "s|${key}|${escaped_value}|g" "$output" > "${output}.tmp"
         mv "${output}.tmp" "$output"
     done
+
+    if grep -qE '\{\{[^}]+\}\}' "$output"; then
+        echo "Error: unresolved template variables remain in $output." >&2
+        grep -oE '\{\{[^}]+\}\}' "$output" | sort -u >&2
+        exit 1
+    fi
 
     echo " -> Generated: $output"
 done
