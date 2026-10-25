@@ -7,15 +7,14 @@ on:
   push:
     branches:
       - main
-    paths:
-      - ".github/workflows/build.yml"
-      - "recipes/**"
-      - "files/scripts/build-tuxedo.sh"
+    paths-ignore: # don't rebuild if only documentation have changed
+      - "**.md"
+      - "docs/**"
+
   pull_request:
-    paths:
-      - ".github/workflows/build.yml"
-      - "recipes/**"
-      - "files/scripts/build-tuxedo.sh"
+    paths-ignore: # don't rebuild if only documentation has changed
+      - "**.md"
+      - "docs/**"
   workflow_dispatch: # allow manually triggering builds
 
 concurrency:
