@@ -21,6 +21,14 @@ TEMPLATES=(
     "docs/README-TR.template.md"
 )
 
+# alternative way to handle it; need test.
+# Enable recursive wildcard searching
+#shopt -s globstar
+
+# Put all matching files into the array
+#TEMPLATES=( **/*.template.md )
+
+
 # ==============================================================================
 # 2. ENGINE / LOGIC - No need to touch below this line
 # ==============================================================================
