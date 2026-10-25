@@ -10,7 +10,7 @@ on:
     paths:
       - ".github/workflows/build.yml"
       - "recipes/**"
-      - "files/scripts/build-tuxedo.sh"
+      - "files/scripts/build-tuxedo.sh" # test
   pull_request:
     paths:
       - ".github/workflows/build.yml"
