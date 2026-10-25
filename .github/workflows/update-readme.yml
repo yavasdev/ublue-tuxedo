@@ -28,5 +28,4 @@ jobs:
           echo "Files added to git staging area."
         
       - name: Commit and push changes
-        run: |
-          bash files/scripts/git-check-and-push.sh
+        run: bash files/scripts/git-check-and-push.sh
