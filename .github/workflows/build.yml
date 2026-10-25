@@ -22,11 +22,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
   cancel-in-progress: true
 jobs:
-  call-update-readme:
-    uses: ./.github/workflows/update-readme.yml
-
   recipes:
-    needs: call-update-readme
     name: create-recipe-matrix
     runs-on: ubuntu-latest
     permissions:
