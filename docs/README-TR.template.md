@@ -247,6 +247,78 @@ Bu imajlar, [Sigstore](https://www.sigstore.dev/)'un [cosign](https://github.com
 cosign verify --key cosign.pub ghcr.io/{{AUTHOR}}/<image>:<tag>
 ```
 
+## Forkladığınızda kendi cosign.pub dosyanızı oluşturma
+
+Kendi `cosign.key` ve `cosign.pub` dosyalarınızı oluşturup kullanmak oldukça kolaydır. Aşağıdaki rehber size yardımcı olacaktır:
+
+### cosign aracını yükleme
+
+Aracı, dağıtımınızın varsayılan paket depolarından veya cosign'in GitHub sürümlerinden yükleyebilirsiniz.
+
+#### Doğrudan sürüm dosyasını indirme:
+
+```sh
+curl -O -L "https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-amd64"
+# veya arm64 kullanıyorsanız:
+# curl -O -L "https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-arm64"
+```
+
+#### Çalıştırılabilir hâle getirme:
+
+İndirdikten sonra binary dosyasını yeniden adlandırmanız ve sisteminizin çalıştırabilmesi için yürütme izni vermeniz gerekir:
+
+```sh
+mv cosign-linux-* cosign
+chmod +x cosign
+```
+
+### Anahtarları oluşturma
+
+Şimdi, az önce indirdiğiniz binary dosyasını kullanarak anahtar çiftinizi oluşturabilirsiniz.
+
+**Önemli adım:** Araç sizden parola istediğinde parolayı **tamamen boş bırakın ve `Enter` tuşuna basın!** Parola belirlerseniz otomatik GitHub Actions iş akışı imajınızı imzalamak için anahtarı çözüp kullanamaz.
+
+```sh
+./cosign generate-key-pair
+```
+
+Bu komut depo kökünüzde iki yeni dosya oluşturur: `cosign.pub` (genel anahtar) ve `cosign.key` (özel anahtar).
+
+### Deponuzu yapılandırma
+
+Anahtarlarınızı artık ilgili yerlere koymanız gerekir.
+
+**1. Genel anahtar (`cosign.pub`)**
+
+Bu dosya imajınızın bütünlüğünü doğrulamak için kullanılır. Doğrudan deponuzun kök dizinine commit edilmelidir.
+
+```sh
+git add cosign.pub
+git commit -m "add: cosign public key"
+git push
+```
+
+**2. Özel anahtar (`cosign.key`)**
+
+Bu anahtar, iş akışı tarafından imajı imzalamak için kullanılır. Gizli tutulmalıdır.
+
+- GitHub'da deponuza gidin.
+- **Settings** -> **Secrets and variables** -> **Actions** yolunu izleyin.
+- **New repository secret** düğmesine tıklayın.
+- Secret adını **`SIGNING_SECRET`** olarak belirleyin.
+- Yerel `cosign.key` dosyanızı bir metin düzenleyiciyle açın, **tüm içeriğini** kopyalayın ve Secret value alanına yapıştırın.
+- **Add secret** düğmesine tıklayın.
+
+### Temizleme
+
+Genel anahtarınızı push edip özel anahtarınızı GitHub Secrets içinde güvenle sakladıktan sonra, özel anahtarı ve binary dosyasını gelecekte yanlışlıkla commit etmemeniz için yerel sisteminizden silebilirsiniz:
+
+```sh
+rm cosign.key cosign
+```
+
+Artık hazırsınız! Derlemeleriniz imajlarınızı başarıyla imzalamalıdır.
+
 ## Kurulum ISO'su oluşturma
 
 Bir imajı USB sürücüsüyle sıfırdan kurmak için Fedora Atomik tabanlı bir

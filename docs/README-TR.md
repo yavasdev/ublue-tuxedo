@@ -65,12 +65,12 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
 ##### Bluefin İmajları
 | İmaj | En son sürüm | Boyut |
 | --- | --- | --- |
-| [`bluefin-dx-nvidia-tuxedo`](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![En son sürüm](https://img.shields.io/badge/status-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![Latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) |
-| [`bluefin-dx-tuxedo`](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![En son sürüm](https://img.shields.io/badge/status-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![Latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) |
-| [`bluefin-nvidia-tuxedo`](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![En son sürüm](https://img.shields.io/badge/status-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![Latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) |
-| [`bluefin-tuxedo`](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![En son sürüm](https://img.shields.io/badge/status-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![Latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-tuxedo) |
-| [`utah-nvidia-tuxedo`](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![En son sürüm](https://img.shields.io/badge/status-none-lightgrey)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
-| [`utah-tuxedo`](https://ghcr.io/yavasdev/utah-tuxedo) | [![En son sürüm](https://img.shields.io/badge/status-none-lightgrey)](https://ghcr.io/yavasdev/utah-tuxedo) | [![Latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/utah-tuxedo) |
+| [`bluefin-dx-nvidia-tuxedo`](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) |
+| [`bluefin-dx-tuxedo`](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) |
+| [`bluefin-nvidia-tuxedo`](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) |
+| [`bluefin-tuxedo`](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bluefin-tuxedo) |
+| [`utah-nvidia-tuxedo`](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
+| [`utah-tuxedo`](https://ghcr.io/yavasdev/utah-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/utah-tuxedo) |
 
 ##### Aurora İmajları
 | İmaj | En son sürüm | Boyut |
@@ -247,6 +247,78 @@ Bu imajlar, [Sigstore](https://www.sigstore.dev/)'un [cosign](https://github.com
 cosign verify --key cosign.pub ghcr.io/yavasdev/<image>:<tag>
 ```
 
+## Forkladığınızda kendi cosign.pub dosyanızı oluşturma
+
+Kendi `cosign.key` ve `cosign.pub` dosyalarınızı oluşturup kullanmak oldukça kolaydır. Aşağıdaki rehber size yardımcı olacaktır:
+
+### cosign aracını yükleme
+
+Aracı, dağıtımınızın varsayılan paket depolarından veya cosign'in GitHub sürümlerinden yükleyebilirsiniz.
+
+#### Doğrudan sürüm dosyasını indirme:
+
+```sh
+curl -O -L "https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-amd64"
+# veya arm64 kullanıyorsanız:
+# curl -O -L "https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-arm64"
+```
+
+#### Çalıştırılabilir hâle getirme:
+
+İndirdikten sonra binary dosyasını yeniden adlandırmanız ve sisteminizin çalıştırabilmesi için yürütme izni vermeniz gerekir:
+
+```sh
+mv cosign-linux-* cosign
+chmod +x cosign
+```
+
+### Anahtarları oluşturma
+
+Şimdi, az önce indirdiğiniz binary dosyasını kullanarak anahtar çiftinizi oluşturabilirsiniz.
+
+**Önemli adım:** Araç sizden parola istediğinde parolayı **tamamen boş bırakın ve `Enter` tuşuna basın!** Parola belirlerseniz otomatik GitHub Actions iş akışı imajınızı imzalamak için anahtarı çözüp kullanamaz.
+
+```sh
+./cosign generate-key-pair
+```
+
+Bu komut depo kökünüzde iki yeni dosya oluşturur: `cosign.pub` (genel anahtar) ve `cosign.key` (özel anahtar).
+
+### Deponuzu yapılandırma
+
+Anahtarlarınızı artık ilgili yerlere koymanız gerekir.
+
+**1. Genel anahtar (`cosign.pub`)**
+
+Bu dosya imajınızın bütünlüğünü doğrulamak için kullanılır. Doğrudan deponuzun kök dizinine commit edilmelidir.
+
+```sh
+git add cosign.pub
+git commit -m "add: cosign public key"
+git push
+```
+
+**2. Özel anahtar (`cosign.key`)**
+
+Bu anahtar, iş akışı tarafından imajı imzalamak için kullanılır. Gizli tutulmalıdır.
+
+- GitHub'da deponuza gidin.
+- **Settings** -> **Secrets and variables** -> **Actions** yolunu izleyin.
+- **New repository secret** düğmesine tıklayın.
+- Secret adını **`SIGNING_SECRET`** olarak belirleyin.
+- Yerel `cosign.key` dosyanızı bir metin düzenleyiciyle açın, **tüm içeriğini** kopyalayın ve Secret value alanına yapıştırın.
+- **Add secret** düğmesine tıklayın.
+
+### Temizleme
+
+Genel anahtarınızı push edip özel anahtarınızı GitHub Secrets içinde güvenle sakladıktan sonra, özel anahtarı ve binary dosyasını gelecekte yanlışlıkla commit etmemeniz için yerel sisteminizden silebilirsiniz:
+
+```sh
+rm cosign.key cosign
+```
+
+Artık hazırsınız! Derlemeleriniz imajlarınızı başarıyla imzalamalıdır.
+
 ## Kurulum ISO'su oluşturma
 
 Bir imajı USB sürücüsüyle sıfırdan kurmak için Fedora Atomik tabanlı bir
@@ -334,12 +406,12 @@ Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi is
 
 | İmaj | Kararlı (stable) sürüm | Test (testing) sürümü | En son (latest) sürüm | Boyut |
 | --- | --- | --- | --- | --- |
-| `bluefin-dx-nvidia-tuxedo` | [![stable version](https://img.shields.io/badge/stable-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![latest image size](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) |
-| `bluefin-dx-tuxedo` | [![stable version](https://img.shields.io/badge/stable-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![latest image size](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) |
-| `bluefin-nvidia-tuxedo` | [![stable version](https://img.shields.io/badge/stable-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![latest image size](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) |
-| `bluefin-tuxedo` | [![stable version](https://img.shields.io/badge/stable-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![latest image size](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-tuxedo) |
-| `utah-nvidia-tuxedo` | [![stable version](https://img.shields.io/badge/stable-none-lightgrey)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![latest image size](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
-| `utah-tuxedo` | [![stable version](https://img.shields.io/badge/stable-none-lightgrey)](https://ghcr.io/yavasdev/utah-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/utah-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/utah-tuxedo) | [![latest image size](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/utah-tuxedo) |
+| `bluefin-dx-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/latest_tag?label=stable&ignore=*-*-*,sha*,latest*,testing*,stable)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![latest image size](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) |
+| `bluefin-dx-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/latest_tag?label=stable&ignore=*-*-*,sha*,latest*,testing*,stable)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![latest image size](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) |
+| `bluefin-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/latest_tag?label=stable&ignore=*-*-*,sha*,latest*,testing*,stable)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![latest image size](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) |
+| `bluefin-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/latest_tag?label=stable&ignore=*-*-*,sha*,latest*,testing*,stable)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![latest image size](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bluefin-tuxedo) |
+| `utah-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/latest_tag?label=stable&ignore=*-*-*,sha*,latest*,testing*,stable)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![latest image size](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
+| `utah-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/latest_tag?label=stable&ignore=*-*-*,sha*,latest*,testing*,stable)](https://ghcr.io/yavasdev/utah-tuxedo) | [![testing version](https://img.shields.io/badge/testing-none-lightgrey)](https://ghcr.io/yavasdev/utah-tuxedo) | [![latest version](https://img.shields.io/badge/latest-none-lightgrey)](https://ghcr.io/yavasdev/utah-tuxedo) | [![latest image size](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/utah-tuxedo) |
 
 ### Aurora İmajları
 
