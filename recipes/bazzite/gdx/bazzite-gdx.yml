@@ -5,11 +5,11 @@ name: bazzite-gdx-tuxedo
 description: Bazzite GDX with Tuxedo drivers and Control Center.
 
 alt-tags:
-  - latest
+  - testing
   #- stable
 # note: this image is in still testing phase, use it at your own risk. It is not yet considered stable.
 base-image: ghcr.io/ublue-os/bazzite-gdx
-image-version: latest # stable
+image-version: testing # stable
 
 modules:
   - type: files
