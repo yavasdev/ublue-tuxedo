@@ -24,9 +24,10 @@ modules:
     
   # add flatpak lutris
   - type: default-flatpaks
-    system:
-      install:
-        - net.lutris.Lutris
+    configurations:
+      - scope: system
+        install:
+          - net.lutris.Lutris
 
   - type: dnf
     install:
