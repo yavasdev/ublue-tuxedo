@@ -45,9 +45,10 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
    erken doğrulama için `testing` kullanın.
 
 #### En Son Sürüm imajları
+
+##### Bazzite İmajları
 | İmaj | En son sürüm / tarih |
 | --- | --- |
-| [`aurora-tuxedo`](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) |
 | [`bazzite-deck-gnome-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) |
 | [`bazzite-deck-gnome-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-tuxedo) |
 | [`bazzite-deck-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-deck-nvidia-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-deck-nvidia-tuxedo) |
@@ -61,12 +62,22 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
 | [`bazzite-gnome-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-gnome-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bazzite-gnome-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-gnome-tuxedo) |
 | [`bazzite-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-nvidia-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bazzite-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-nvidia-tuxedo) |
 | [`bazzite-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bazzite-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) |
+
+##### Bluefin İmajları
+| İmaj | En son sürüm / tarih |
+| --- | --- |
 | [`bluefin-dx-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) |
 | [`bluefin-dx-tuxedo`](https://ghcr.io/{{AUTHOR}}/bluefin-dx-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bluefin-dx-tuxedo) |
 | [`bluefin-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bluefin-nvidia-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bluefin-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bluefin-nvidia-tuxedo) |
 | [`bluefin-tuxedo`](https://ghcr.io/{{AUTHOR}}/bluefin-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bluefin-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bluefin-tuxedo) |
 | [`utah-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/utah-nvidia-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/utah-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/utah-nvidia-tuxedo) |
 | [`utah-tuxedo`](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/utah-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) |
+
+##### Aurora İmajları
+| İmaj | En son sürüm / tarih |
+| --- | --- |
+| [`aurora-tuxedo`](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) |
+| [`aurora-nvidia-open-tuxedo`](https://ghcr.io/{{AUTHOR}}/aurora-nvidia-open-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/aurora-nvidia-open-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/aurora-nvidia-open-tuxedo) |
 
 Bu depo, uyumlu [Universal Blue](https://universal-blue.org/) tabanları üzerinde
 TUXEDO sürücüleri ve uygulamaları bulunan özel **Atomik (değişmez) Linux**
@@ -302,11 +313,10 @@ CPU, GPU ve test sonuçlarıyla [bir issue açın](https://github.com/{{AUTHOR}}
 
 Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi ise her başarılı derlemeden sonra GitHub Actions tarafından güncellenen küçük JSON dosyalarından gelir. Bir badge'e tıklamak, ilgili canlı GitHub Packages sayfasını açar. GitHub'ın README işleyicisi yan yana Markdown tablolarını güvenilir bir şekilde desteklemediğinden listeler okunabilir iki tabloya bölünmüştür.
 
-#### İmajlar
+### Bazzite İmajları
 
 | İmaj | Kararlı (stable) sürüm / tarih | Test (testing) sürümü / tarih | En son (latest) sürüm / tarih |
 | --- | --- | --- | --- |
-| `aurora-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) |
 | `bazzite-deck-gnome-nvidia-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) |
 | `bazzite-deck-gnome-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-tuxedo) |
 | `bazzite-deck-nvidia-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-nvidia-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/bazzite-deck-nvidia-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-nvidia-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/bazzite-deck-nvidia-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-nvidia-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/bazzite-deck-nvidia-tuxedo) |
@@ -320,12 +330,24 @@ Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi is
 | `bazzite-gnome-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-gnome-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/bazzite-gnome-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-gnome-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/bazzite-gnome-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-gnome-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/bazzite-gnome-tuxedo) |
 | `bazzite-nvidia-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-nvidia-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/bazzite-nvidia-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-nvidia-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/bazzite-nvidia-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-nvidia-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/bazzite-nvidia-tuxedo) |
 | `bazzite-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) |
+
+### Bluefin İmajları
+
+| İmaj | Kararlı (stable) sürüm / tarih | Test (testing) sürümü / tarih | En son (latest) sürüm / tarih |
+| --- | --- | --- | --- |
 | `bluefin-dx-nvidia-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) |
 | `bluefin-dx-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/bluefin-dx-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/bluefin-dx-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/bluefin-dx-tuxedo) |
 | `bluefin-nvidia-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-nvidia-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/bluefin-nvidia-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-nvidia-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/bluefin-nvidia-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-nvidia-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/bluefin-nvidia-tuxedo) |
 | `bluefin-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/bluefin-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/bluefin-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/bluefin-tuxedo) |
 | `utah-nvidia-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/utah-nvidia-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/utah-nvidia-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/utah-nvidia-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/utah-nvidia-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/utah-nvidia-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/utah-nvidia-tuxedo) |
 | `utah-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/utah-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/utah-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/utah-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) |
+
+### Aurora İmajları
+
+| İmaj | Kararlı (stable) sürüm / tarih | Test (testing) sürümü / tarih | En son (latest) sürüm / tarih |
+| --- | --- | --- | --- |
+| `aurora-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) |
+| `aurora-nvidia-open-tuxedo` | [![stable version]({{BADGE_URL}}/{{AUTHOR}}/aurora-nvidia-open-tuxedo/stable)](https://ghcr.io/{{AUTHOR}}/aurora-nvidia-open-tuxedo) | [![testing version]({{BADGE_URL}}/{{AUTHOR}}/aurora-nvidia-open-tuxedo/testing)](https://ghcr.io/{{AUTHOR}}/aurora-nvidia-open-tuxedo) | [![latest version]({{BADGE_URL}}/{{AUTHOR}}/aurora-nvidia-open-tuxedo/latest)](https://ghcr.io/{{AUTHOR}}/aurora-nvidia-open-tuxedo) |
 
 ## Sınırlamalar ve gelecekteki çalışmalar
 
