@@ -1,5 +1,4 @@
 # uBlue Tuxedo — Universal Blue Images for TUXEDO and Clevo Laptops
-[![Latest build](https://github.com/{{AUTHOR}}/{{REPO_NAME}}/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/{{AUTHOR}}/{{REPO_NAME}}/actions/workflows/build.yml)
 [![GitHub stars](https://img.shields.io/github/stars/{{AUTHOR}}/{{REPO_NAME}}?style=flat)](https://github.com/{{AUTHOR}}/{{REPO_NAME}}/stargazers)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/{{AUTHOR}}/{{REPO_NAME}}/badge)](https://scorecard.dev/viewer/?uri=github.com/{{AUTHOR}}/{{REPO_NAME}})
 
