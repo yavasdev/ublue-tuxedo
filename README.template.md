@@ -3,7 +3,6 @@
 ### Universal Blue images for TUXEDO and Clevo laptops
 
 [![GitHub stars](https://img.shields.io/github/stars/{{AUTHOR}}/{{REPO_NAME}}?style=flat)](https://github.com/{{AUTHOR}}/{{REPO_NAME}}/stargazers)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/{{AUTHOR}}/{{REPO_NAME}}/badge)](https://scorecard.dev/viewer/?uri=github.com/{{AUTHOR}}/{{REPO_NAME}})
 [![Build images](https://github.com/{{AUTHOR}}/{{REPO_NAME}}/actions/workflows/build.yml/badge.svg)](https://github.com/{{AUTHOR}}/{{REPO_NAME}}/actions/workflows/build.yml)
 [![Update README](https://github.com/{{AUTHOR}}/{{REPO_NAME}}/actions/workflows/update-readme.yml/badge.svg)](https://github.com/{{AUTHOR}}/{{REPO_NAME}}/actions/workflows/update-readme.yml)
 
