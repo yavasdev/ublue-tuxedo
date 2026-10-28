@@ -1,35 +1,64 @@
 name: Cleanup Old Images
-on:
-  schedule:
-    - cron: "15 0 * * 0" # 0015 UTC on Sundays
-  workflow_dispatch:
 
+on:
+  # 1. Scheduled Trigger: Runs automatically based on a cron expression.
+  schedule:
+    - cron: "15 0 * * 0" # Runs at 00:15 UTC every Sunday.
+  
+  # 2. Manual Trigger: Allows you to run the workflow manually from the GitHub UI.
+  workflow_dispatch:
+    inputs:
+      older_than_input:
+        description: 'How old should the images be to be deleted? X days.'
+        required: false
+        default: '90 days'
+        type: string
+
+# Permissions are left empty here because the workflow relies on a Personal Access Token (PAT) 
+# stored in GitHub Secrets rather than the default GITHUB_TOKEN.
 permissions: {}
 
+# Concurrency ensures that only one instance of this workflow runs at a time for a given branch/run.
+# This prevents race conditions if the workflow is triggered multiple times simultaneously.
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
 
 jobs:
-  delete-older-than-90:
+  delete-old-images:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete Images Older Than 90 Days
+      - name: Delete Old Images
         uses: dataaxiom/ghcr-cleanup-action@v1.2.2
         with:
-          # 1. Use a PAT instead of GITHUB_TOKEN
+          # --- Authentication ---
+          # Use a PAT instead of GITHUB_TOKEN. Deleting packages in GitHub Container Registry (GHCR)
+          # usually requires a PAT with 'delete:packages' permission.
           token: ${{ secrets.GHCR_CLEANUP_PAT }}
           
-          # Optional but recommended to explicitly define the owner:
+          # --- Target Repository ---
+          # Explicitly defines the owner of the packages to prevent ambiguity.
           owner: ${{ github.repository_owner }}
           
-          # 2. Use a wildcard to target all packages. 
-          # You can use '**' for everything, or e.g., 'bazzite*' to match all bazzite variants.
+          # --- Package Selection ---
+          # Use a wildcard to target all packages under the owner. 
+          # You can change this to specific names like 'bazzite*' to match specific image variants.
           packages: '**'
           
-          # 3. Enable wildcard expansion for the packages input
+          # Enables wildcard expansion so '**' correctly targets multiple packages.
           expand-packages: true
           
-          older-than: 1 days # clearing images.
+          # --- Deletion Criteria ---
+          # Dynamically assigns the age limit for deletion.
+          # - If triggered manually, it uses the value provided in 'older_than_input' (e.g., '90 days').
+          # - If triggered by the cron schedule, 'inputs' is null, so it falls back to '90 days'.
+          older-than: ${{ inputs.older_than_input || '90 days' }} 
+          
+          # Automatically deletes images that have no tags attached to them.
           delete-orphaned-images: true
+          
+          # --- Retention Policy ---
+          # Always keep the 7 most recent tagged images, regardless of their age.
           keep-n-tagged: 7
+          
+          # Always keep the 7 most recent untagged (orphaned) images, regardless of their age.
           keep-n-untagged: 7
