@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
 name: bazzite-dx-nvidia-gnome-yavasdev
-description: Bazzite DX Nvidia Gnome with Tuxedo drivers and Control Center and some custom settings..
+description: Bazzite DX Nvidia Gnome with Tuxedo drivers and Control Center and some custom settings.
 
 alt-tags:
   - stable
@@ -18,16 +18,15 @@ modules:
 
   # custom package removal
   - type: rpm-ostree
-    flags:
-      - --allow-inactive
     remove:
       # remove broken system lutris
       - lutris
     
-    # add flatpak lutris
-  - type: flatpaks
-    install:
-      - net.lutris.Lutris
+  # add flatpak lutris
+  - type: default-flatpaks
+    system:
+      install:
+        - net.lutris.Lutris
 
   - type: dnf
     install:
