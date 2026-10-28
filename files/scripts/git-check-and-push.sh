@@ -13,7 +13,11 @@ git config user.name "github-actions[bot]"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 git commit -m "docs: generate README and README-TR with updated templates"
 
-git push origin "HEAD:${GITHUB_REF_NAME}"
+# GITHUB_HEAD_REF is available on PRs. Fall back to GITHUB_REF_NAME on pushes.
+TARGET_BRANCH="${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}"
+
+# Explicitly push to refs/heads/<branch-name> to avoid the refname error
+git push origin "HEAD:refs/heads/${TARGET_BRANCH}"
 
 echo "Changes pushed successfully!"
 echo "    -> Commit message: \"docs: generate README and README-TR with updated templates\""
