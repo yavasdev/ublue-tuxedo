@@ -19,8 +19,8 @@ modules:
         destination: /
       
       # uncomment if you want to add lutris flatpak path
-      - source: opinionated/system/etc/usr/bin/lutris
-        destination: /etc/usr/bin/lutris
+      - source: opinionated/system/usr/bin/lutris
+        destination: /usr/bin/lutris
 
   # custom package removal
   - type: rpm-ostree
