@@ -1,0 +1,35 @@
+name: Cleanup Old Images
+on:
+  schedule:
+    - cron: "15 0 * * 0" # 0015 UTC on Sundays
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+
+jobs:
+  delete-older-than-90:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete Images Older Than 90 Days
+        uses: dataaxiom/ghcr-cleanup-action@v1.2.2
+        with:
+          # 1. Use a PAT instead of GITHUB_TOKEN
+          token: ${{ secrets.GHCR_CLEANUP_PAT }}
+          
+          # Optional but recommended to explicitly define the owner:
+          owner: ${{ github.repository_owner }}
+          
+          # 2. Use a wildcard to target all packages. 
+          # You can use '**' for everything, or e.g., 'bazzite*' to match all bazzite variants.
+          packages: '**'
+          
+          # 3. Enable wildcard expansion for the packages input
+          expand-packages: true
+          
+          older-than: 1 days # clearing images.
+          delete-orphaned-images: true
+          keep-n-tagged: 7
+          keep-n-untagged: 7

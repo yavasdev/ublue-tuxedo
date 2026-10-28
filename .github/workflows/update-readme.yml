@@ -1,0 +1,39 @@
+name: Update README with Template Variables
+# test
+on:
+  push:
+    branches:
+      - main
+      - main-test
+  pull_request:
+    branches:
+      - main
+      - main-test
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    name: Generate and Push README
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Write permission required to push to the repo
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          # Use the PR branch if it's a PR, otherwise use the push branch
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Generate READMEs from templates
+        run: bash files/scripts/generate-readmes.sh
+
+      - name: add generated files to git
+        run: |
+          # Add generated files to the Git staging area
+          echo "Adding generated README files to git..."
+          git add README.md docs/README-TR.md 
+          echo "Files added to git staging area."
+        
+      - name: Commit and push changes
+        run: bash files/scripts/git-check-and-push.sh
