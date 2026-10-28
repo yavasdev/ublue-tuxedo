@@ -9,8 +9,7 @@ on:
       - main
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
-      - "docs/**.md"
-      - "docs/tests/**/*"
+      - "docs/**"
 
   workflow_dispatch: # allow manually triggering builds
 concurrency:
