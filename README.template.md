@@ -205,6 +205,66 @@ These images are digitally signed using [Sigstore](https://www.sigstore.dev/)'s 
 cosign verify --key cosign.pub ghcr.io/{{AUTHOR}}/<image>:<tag>
 ```
 
+## Creating your own cosign.pub when forking
+its actually easy to create and use your cosign.key and cosign.pub files, here is the guide:
+
+### install cosign tool
+you can install it from package managers default repos or cosign's github releases.
+
+#### direct release:
+```sh
+curl -O -L "https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-amd64"
+# or arm64 if you have one (maybe arm pc's future is coming!?)
+# curl -O -L "https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-arm64"
+```
+
+#### make it executable:
+After downloading, you need to rename the binary and grant it execution permissions so your system can run it:
+```sh
+mv cosign-linux-* cosign
+chmod +x cosign
+```
+
+### generate the keys
+Now, you can generate your key pair using the binary you just downloaded. 
+
+**Crucial Step:** When the tool prompts you for a password, **leave it completely blank and press `Enter`!** If you set a password, the automated GitHub Actions workflow won't be able to decrypt and use the key to sign your image.
+
+```sh
+./cosign generate-key-pair
+```
+This command will create two new files in your repository root: `cosign.pub` (public key) and `cosign.key` (private key).
+
+### setup your repository
+Now that your keys are generated, they need to go to their respective places.
+
+**1. The Public Key (`cosign.pub`)**
+This file is used to verify your image's integrity. It needs to be committed directly to the root of your repository.
+```sh
+git add cosign.pub
+git commit -m "add: cosign public key"
+git push
+```
+
+**2. The Private Key (`cosign.key`)**
+
+This key is used by the workflow to actually sign the image. It must be kept secret.
+- Go to your repository on GitHub.
+- Navigate to **Settings** -> **Secrets and variables** -> **Actions**.
+- Click **New repository secret**.
+- Name the secret **`SIGNING_SECRET`**.
+- Open your local `cosign.key` file with a text editor, copy its **entire contents**, and paste it into the Secret value box.
+- Click "Add secret".
+
+### cleanup
+Since your public key is pushed and your private key is safely stored in GitHub Secrets, you no longer need the local private key or the binary. Delete them so you don't accidentally commit your private key in the future:
+```sh
+rm cosign.key cosign
+```
+You are all set! Your builds should now successfully sign your images.
+
+###
+
 ## Create an installation ISO
 
 To install an image from scratch using a USB drive, generate an ISO on a
