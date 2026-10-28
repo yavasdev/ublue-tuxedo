@@ -1,17 +1,49 @@
-# uBlue Tuxedo — Universal Blue Images for TUXEDO and Clevo Laptops
+# uBlue Tuxedo
+
+### Universal Blue images for TUXEDO and Clevo laptops
+
 [![GitHub stars](https://img.shields.io/github/stars/yavasdev/ublue-tuxedo?style=flat)](https://github.com/yavasdev/ublue-tuxedo/stargazers)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/yavasdev/ublue-tuxedo/badge)](https://scorecard.dev/viewer/?uri=github.com/yavasdev/ublue-tuxedo)
+[![Build images](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/build.yml/badge.svg)](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/build.yml)
+[![Update README](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/update-readme.yml/badge.svg)](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/update-readme.yml)
 
 [🇺🇸 English](README.md) | [🇹🇷 Türkçe](docs/README-TR.md)
 
-### Latest image updates
+> [!IMPORTANT]
+> This project provides experimental, community-maintained Atomic images. Check the compatibility notes and tested variants before rebasing, and keep a working rollback or recovery option.
 
-Builds run automatically every day. Each badge is refreshed after a successful
-build and shows the latest tag and publication date; clicking it opens the
-corresponding live GitHub Packages page. Detailed `stable`, `testing`, and `latest`
-tags are kept near the end of the README.
+uBlue Tuxedo provides ready-to-use [Universal Blue](https://universal-blue.org/) images with TUXEDO drivers and **Tuxedo Control Center (TCC)** included. It targets TUXEDO and Clevo-based laptops and publishes new builds automatically with [BlueBuild](https://blue-build.org/).
 
-#### Images A–M
+## Start here
+
+| I want to... | Go to |
+| --- | --- |
+| Choose an image | [Available images](#available-images) |
+| Install on an existing Atomic system | [Installation](#installation) |
+| Check whether my laptop is a good candidate | [Potentially supported devices](#potentially-supported-devices) |
+| Confirm an image is authentic | [Verification](#verification) |
+| See what has been tested | [Human-tested distributions](#human-tested-distributions) |
+| Report a compatibility result | [Open an issue](https://github.com/yavasdev/ublue-tuxedo/issues) |
+
+## What you get
+
+- **TUXEDO kernel drivers** compiled against the matching kernel.
+- **Tuxedo Control Center** for hardware, fan, and power management.
+- **Universal Blue choices** across Bazzite, Bluefin, Aurora, and selected Utah variants.
+- **Automated updates** from daily builds and recipe changes.
+- **Signed images** published to GitHub Container Registry and verifiable with Cosign.
+
+## Available images
+
+Builds run automatically every day. Each badge shows the latest published tag and date; click an image name or badge to open its GitHub Container Registry package. The authoritative image definitions are in [`recipes/`](recipes/).
+
+### Choosing an image
+
+1. Choose the same image family and desktop environment you already use.
+2. Choose an `nvidia` variant only if your laptop uses NVIDIA graphics.
+3. Use `stable` for daily use when it is available; use `latest` for the newest build and `testing` for early validation.
+
+#### Latest Images
 
 | Image | Latest version / date |
 | --- | --- |
@@ -20,16 +52,10 @@ tags are kept near the end of the README.
 | [`bazzite-deck-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) |
 | [`bazzite-deck-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) |
 | [`bazzite-deck-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-tuxedo) |
-| [`bazzite-dx-gnome-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-dx-gnome-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-dx-gnome-nvidia-tuxedo) |
 | [`bazzite-dx-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-dx-gnome-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-dx-gnome-tuxedo) |
 | [`bazzite-dx-nvidia-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-dx-nvidia-gnome-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-gnome-tuxedo) |
 | [`bazzite-dx-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-dx-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-tuxedo) |
 | [`bazzite-dx-tuxedo`](https://ghcr.io/yavasdev/bazzite-dx-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-dx-tuxedo) |
-
-#### Images N–Z
-
-| Image | Latest version / date |
-| --- | --- |
 | [`bazzite-gdx-tuxedo`](https://ghcr.io/yavasdev/bazzite-gdx-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gdx-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-gdx-tuxedo) |
 | [`bazzite-gnome-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-gnome-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-gnome-nvidia-tuxedo) |
 | [`bazzite-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) |
@@ -42,7 +68,7 @@ tags are kept near the end of the README.
 | [`utah-nvidia-tuxedo`](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
 | [`utah-tuxedo`](https://ghcr.io/yavasdev/utah-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-tuxedo) |
 
-This repository builds custom **Atomic (Immutable) Linux** operating system images with Tuxedo drivers and applications for compatible [Universal Blue](https://universal-blue.org/) base images. It is intended primarily for TUXEDO and other Clevo laptops, while supporting multiple Universal Blue image families through separate recipes.
+This repository builds custom **Atomic (immutable) Linux** images with TUXEDO drivers and applications on compatible [Universal Blue](https://universal-blue.org/) bases. Separate recipes support multiple Universal Blue families.
 
 The recipes integrate the following features on top of their selected base image:
 - **Tuxedo Drivers:** Up-to-date kernel modules compiled from source and baked directly into the system.
@@ -58,16 +84,18 @@ The workflow runs every day at **06:00 UTC**, shortly after the upstream images 
 
 Because the recipes use BlueBuild's `dnf` module, this approach can extend to most popular Universal Blue images that include DNF support in their system, subject to compatible packages and kernel sources.
 
-### Strengths
+### Why uBlue Tuxedo?
 
-- Daily scheduled builds and builds on recipe changes.
-- A choice of Bazzite, Bluefin, Aurora, and selected Utah variants.
-- Images are signed with Cosign and can be verified using the public key in this repository.
-- Drivers are compiled for the matching kernel, and TCC is installed without relying on post-install service scripts.
+- Performs daily scheduled builds.
+- Supports Bazzite, Bluefin, Aurora, and selected Utah variants, as well as potential other ublue images.
+- Provides images signed with Cosign that can be verified using the public key in this repository.
+- Provides drivers compiled for the matching kernel and allows for a Tuxedo Control Center installation without relying on installation scripts.
 
-### Why choose this over the legacy TCC repository?
+### Why choose this over other TCC github repos?
 
-[BrickMan240/ublue-tuxedo-tcc](https://github.com/BrickMan240/ublue-tuxedo-tcc) was an important early option for TUXEDO support. This repository is a better fit when you want a maintained, recipe-based image set: it covers more Universal Blue variants, uses BlueBuild's current workflow, builds daily, and publishes its own signed images. The legacy project remains a useful reference, but its original goal was to provide a temporary solution until upstream support improved.
+This repository is better suited for those who want a maintained, recipe-based image set: it covers more Universal Blue variants, uses the current BlueBuild workflow, builds daily, and publishes its own signed images. 
+
+Older projects like the [ublue-tuxedo-tcc project](https://github.com/BrickMan240/ublue-tuxedo-tcc) still provide a useful reference; however, their goal was to offer a temporary workaround until upstream support improved. Since this issue remains unresolved today, I created this repo that generates images every day.
 
 | Repository | GitHub stars | Latest activity | Build trigger | Registry | Signing | Scope |
 | --- | ---: | --- | --- | --- | --- | --- |
@@ -77,31 +105,32 @@ Because the recipes use BlueBuild's `dnf` module, this approach can extend to mo
 The star counts in the table are loaded live from GitHub.
 
 > [!WARNING]
-> [Custom images are experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) in fedora project, try at your own discretion.
+> Custom images are an [experimental Fedora feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable). Rebasing changes your operating system deployment. Read the upstream documentation for your base image and make sure you understand how to roll back.
 
 ## Installation
 
 > [!WARNING]
 > This process will replace your current Atomic Fedora or Universal Blue operating system image. Make sure that the image variant you choose matches your hardware, base image, and current installation.
+> You are responsible for any system breakages caused by selecting the wrong image.
 
-> [!WARNING]
-> These images are experimental and have not been fully tested. Use them at your own discretion.
+> [!TIP]
+> Before rebasing, record your current deployment with `rpm-ostree status` and confirm that you have a working bootable fallback.
 
-### Existing Bazzite users
+### Rebase an existing Atomic installation
 
-Before rebasing from an existing Bazzite installation, upstream recommends removing layered packages:
+Before rebasing, removing layered packages recommended:
 
 ```bash
 rpm-ostree reset
 ```
 
-Choose an image that matches your hardware and keep the same desktop environment as your current installation when rebasing.
+Choose an image that matches your hardware and keep the same desktop environment as your current installation. Replace `<image>` and `<tag>` below with one of the names in [Available images](#available-images) or [Recent tagged image versions](#recent-tagged-image-versions).
 
-To rebase an existing Atomic Fedora installation to a published image, replace `<image>` with the name of the recipe-built image you want to use:
+To rebase an existing Atomic Fedora installation to a published image, replace `<image>` and `<tag>` with the name of the recipe-built image you want to use:
 
 - First rebase to the unsigned image to install the signing keys and policies:
   ```bash
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/yavasdev/<image>:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/yavasdev/<image>:<tag>
   ```
 - Reboot to complete the rebase:
   ```bash
@@ -109,20 +138,29 @@ To rebase an existing Atomic Fedora installation to a published image, replace `
   ```
 - Then switch to the signed image:
   ```bash
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/yavasdev/<image>:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/yavasdev/<image>:<tag>
   ```
 - Reboot again to complete the installation:
   ```bash
   systemctl reboot
   ```
 
-Image names and supported variants are defined by the files in [`recipes/`](recipes/); the example above is not limited to Bazzite-based images. The `latest` tag points to the newest build for the configured Fedora version. The `stable` tag is also published by recipes that define it.
+Image names and supported variants are defined by the files in [`recipes/`](recipes/); The `latest` tag points to the latest, The `stable` tag points to the last stable and The `testing` tag points to the last testing build for their configured Fedora version.
+
+### Roll back
+
+If you need to return to the previous deployment, select it from the boot menu or run:
+
+```bash
+rpm-ostree rollback
+systemctl reboot
+```
 
 ## Recipe and base image notes
 
-This is a popular uBlue-tuxedo repository rather than a Bazzite-only project. Recipes cover multiple Universal Blue families, including Bazzite, Bluefin, Aurora, and selected Project Bluefin images. Each recipe determines its base image, packages, image name, and supported variant. The authoritative list is the [`recipes/`](recipes/) directory.
+Recipes cover multiple Universal Blue families, including Bazzite, Bluefin, Aurora, and selected Project Bluefin images. Each recipe defines its base image, packages, image name, and supported variant. The authoritative list is in [`recipes/`](recipes/).
 
-The Utah recipes use Utah's Hummingbird-based kernel. They resolve matching kernel development files dynamically during the build instead of relying on a fixed Fedora release or a generic `kernel-devel` package. Utah is experimental and may require additional compatibility work as its kernel and package sources change.
+The Utah recipes use Utah's Hummingbird-based kernel. The images like this patched in script with resolving matching kernel development files dynamically during the build instead of relying on a fixed Fedora release or a generic `kernel-devel` package.
 
 Project Bluefin Dakota is not currently compatible with these BlueBuild recipes. Dakota is assembled with BuildStream rather than the DNF package-management model used here.
 
@@ -139,7 +177,7 @@ The following table tracks variants that have been installed and used on physica
 | [Bazzite](https://bazzite.gg/) | Bazzite DX KDE | Not tested yet |
 | [Bazzite](https://bazzite.gg/) | Bazzite DX GNOME | Not tested yet |
 | [Bazzite](https://bazzite.gg/) | **Bazzite DX NVIDIA** | [**Human tested**](docs/tests/bazzite-dx-nvidia-tuxedo/) |
-| [Bazzite](https://bazzite.gg/) | Bazzite DX GNOME NVIDIA | Not tested yet |
+| [Bazzite](https://bazzite.gg/) | **Bazzite DX GNOME NVIDIA** | [**Human tested**](docs/tests/bazzite-dx-nvidia-gnome-tuxedo/) |
 | [Bazzite](https://bazzite.gg/) | Bazzite GDX KDE | Not tested yet |
 | [Bazzite](https://bazzite.gg/) | Bazzite Deck KDE | Not tested yet |
 | [Bazzite](https://bazzite.gg/) | Bazzite Deck GNOME | Not tested yet |
@@ -164,15 +202,15 @@ Want to help expand hardware coverage? If you can test one of the unverified var
 These images are digitally signed using [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign) tool. To verify the authenticity of the image, you can download the `cosign.pub` file from this repository and run the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/yavasdev/<image>:latest
+cosign verify --key cosign.pub ghcr.io/yavasdev/<image>:<tag>
 ```
 
----
----
+## Create an installation ISO
 
-## Extra Information: ISO Generation (Offline Installation)
-
-If you want to install this image from scratch on a computer using a USB drive, you can generate your own ISO file on a Fedora Atomic-based system. Check out the [BlueBuild ISO Guide](https://blue-build.org/how-to/generate-iso/#_top) for instructions. *(Since ISO files are very large, they cannot be hosted on GitHub for free and I don't want to bother it).*
+To install an image from scratch using a USB drive, generate an ISO on a
+Fedora Atomic-based system by following the [BlueBuild ISO
+Guide](https://blue-build.org/how-to/generate-iso/#_top). ISO files are not
+provided by this repository.
 
 ## Potentially supported devices
 
@@ -187,7 +225,7 @@ These device families are potential candidates because they are TUXEDO laptops o
 - **Pulse:** Pulse 14/16 and other Pulse configurations
 - **Aura:** Aura 14/15 and other Aura configurations
 
-See the current [TUXEDO laptop lineup](https://www.tuxedocomputers.com/en/Linux-Hardware/Linux-Notebooks.tuxedo) for exact models and configurations.
+See the current [TUXEDO laptops](https://www.tuxedocomputers.com/index.php) for exact models and configurations.
 
 ### Clevo-based laptops
 
@@ -215,12 +253,11 @@ This is a broad, non-exhaustive list. Some companies use a mixture of Clevo, Ton
 
 For Clevo devices, check the chassis identifier reported by the firmware or `dmidecode` before opening a report. Please [open an issue](https://github.com/yavasdev/ublue-tuxedo/issues) with the exact model, Clevo chassis identifier, CPU, GPU, and test results.
 
-<!-- BEGIN TAGGED IMAGE VERSIONS -->
 ## Recent tagged image versions
 
 The badge links are static, while their displayed version and publication date come from small JSON files refreshed by GitHub Actions after each successful build. Clicking a badge opens the corresponding live GitHub Packages page. GitHub README rendering does not reliably support side-by-side Markdown tables, so the lists are split into two readable tables.
 
-#### Images A–M
+#### Images
 
 | Image | Stable version / date | Testing version / date | Latest version / date |
 | --- | --- | --- | --- |
@@ -229,16 +266,10 @@ The badge links are static, while their displayed version and publication date c
 | `bazzite-deck-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) |
 | `bazzite-deck-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) |
 | `bazzite-deck-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-tuxedo) |
-| `bazzite-dx-gnome-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-dx-gnome-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-dx-gnome-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-dx-gnome-nvidia-tuxedo) |
 | `bazzite-dx-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-dx-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-dx-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-dx-gnome-tuxedo) |
 | `bazzite-dx-nvidia-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-gnome-tuxedo) |
 | `bazzite-dx-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-tuxedo) |
 | `bazzite-dx-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-dx-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-dx-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-dx-tuxedo) |
-
-#### Images N–Z
-
-| Image | Stable version / date | Testing version / date | Latest version / date |
-| --- | --- | --- | --- |
 | `bazzite-gdx-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gdx-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-gdx-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gdx-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-gdx-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gdx-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-gdx-tuxedo) |
 | `bazzite-gnome-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-gnome-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-gnome-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-gnome-nvidia-tuxedo) |
 | `bazzite-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) |
@@ -250,7 +281,6 @@ The badge links are static, while their displayed version and publication date c
 | `bluefin-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/stable)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/testing)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/latest)](https://ghcr.io/yavasdev/bluefin-tuxedo) |
 | `utah-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
 | `utah-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/stable)](https://ghcr.io/yavasdev/utah-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/testing)](https://ghcr.io/yavasdev/utah-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/latest)](https://ghcr.io/yavasdev/utah-tuxedo) |
-<!-- END TAGGED IMAGE VERSIONS -->
 
 ## Limitations and future work
 
@@ -271,8 +301,8 @@ The badge links are static, while their displayed version and publication date c
 - [BlueBuild](https://github.com/blue-build) and the [BlueBuild GitHub Action](https://github.com/blue-build/github-action) for the recipe format and build system.
 - [Universal Blue](https://github.com/ublue-os) and the maintainers of the Bazzite, Bluefin, and Aurora base images.
 - [TUXEDO Computers](https://github.com/tuxedocomputers) for the drivers and Tuxedo Control Center.
-- Project contributors and code owners: [@yavasdev](https://github.com/yavasdev), [@xynydev](https://github.com/xynydev), and [@fiftydinar](https://github.com/fiftydinar).
+- Project contributors and code owners: [@yavasdev](https://github.com/yavasdev).
 
 ## Repository history
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yavasdev/ublue-tuxedo%2CBrickMan240/ublue-tuxedo-tcc&type=Date)](https://star-history.com/#yavasdev/ublue-tuxedo&BrickMan240/ublue-tuxedo-tcc&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=yavasdev/ublue-tuxedo&type=Date)](https://star-history.com/#yavasdev/ublue-tuxedo&Date)

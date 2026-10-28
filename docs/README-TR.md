@@ -1,17 +1,53 @@
-# uBlue Tuxedo — TUXEDO ve Clevo Dizüstü Bilgisayarları için Universal Blue İmajları
+# uBlue Tuxedo
+
+### TUXEDO ve Clevo dizüstü bilgisayarları için Universal Blue imajları
+
 [![GitHub stars](https://img.shields.io/github/stars/yavasdev/ublue-tuxedo?style=flat)](https://github.com/yavasdev/ublue-tuxedo/stargazers)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/yavasdev/ublue-tuxedo/badge)](https://scorecard.dev/viewer/?uri=github.com/yavasdev/ublue-tuxedo)
+[![Build images](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/build.yml/badge.svg)](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/build.yml)
+[![Update README](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/update-readme.yml/badge.svg)](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/update-readme.yml)
 
 [🇺🇸 English](README.md) | [🇹🇷 Türkçe](docs/README-TR.md)
 
-### Son imaj güncellemeleri
+> [!IMPORTANT]
+> Bu proje deneysel ve topluluk tarafından sürdürülen Atomik imajlar sağlar. Rebase işleminden önce uyumluluk notlarını ve test edilmiş varyantları kontrol edin; çalışan bir geri alma veya kurtarma seçeneğiniz olsun.
 
-Derlemeler otomatik olarak her gün yapılır. Bu kısa tablo, her tag'i
-genişletmeden her imaj için kaydedilen son güncellemeyi gösterir; ayrıntılı
-`stable`, `testing` ve `latest` bilgileri README'nin sonlarına yakın tutulur.
-Her badge GHCR'dan canlı olarak alınır ve en son imaj tag'ini (ve yayımlanma tarihini) gösterir; badge'e tıklamak ilgili GitHub Packages sayfasını açar.
+uBlue Tuxedo, TUXEDO sürücüleri ve **Tuxedo Control Center (TCC)** içeren kullanıma hazır [Universal Blue](https://universal-blue.org/) imajları sağlar. Proje, TUXEDO ve Clevo tabanlı dizüstü bilgisayarları hedefler ve yeni imajları [BlueBuild](https://blue-build.org/) ile otomatik olarak yayımlar.
 
-#### A–M imajları
+## Buradan başlayın
+
+| Şunu yapmak istiyorum... | Şuraya gidin |
+| --- | --- |
+| Bir imaj seçmek | [Kullanılabilir imajlar](#kullanılabilir-imajlar) |
+| Mevcut Atomik sisteme kurmak | [Kurulum](#kurulum) |
+| Dizüstü bilgisayarımın uygunluğunu kontrol etmek | [Potansiyel olarak desteklenebilecek cihazlar](#potansiyel-olarak-desteklenebilecek-cihazlar) |
+| İmajın gerçekliğini doğrulamak | [Doğrulama](#doğrulama) |
+| Test edilenleri görmek | [İnsan tarafından test edilen dağıtımlar](#insan-tarafından-test-edilen-dağıtımlar) |
+| Uyumluluk sonucu bildirmek | [Bir issue açın](https://github.com/yavasdev/ublue-tuxedo/issues) |
+
+## Neler dahil?
+
+- **TUXEDO çekirdek sürücüleri:** Eşleşen çekirdeğe karşı derlenir.
+- **Tuxedo Control Center:** Donanım, fan ve güç yönetimi.
+- **Universal Blue seçenekleri:** Bazzite, Bluefin, Aurora ve seçili Utah varyantları.
+- **Otomatik güncellemeler:** Günlük derlemeler ve recipe değişiklikleri.
+- **İmzalı imajlar:** GitHub Container Registry'de yayımlanır ve Cosign ile doğrulanabilir.
+
+## Kullanılabilir imajlar
+
+Derlemeler her gün otomatik olarak yapılır. Her badge, yayımlanan en son tag'i
+ve tarihi gösterir; imajın adına veya badge'ine tıklayarak GitHub Container
+Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
+[`recipes/`](recipes/) klasörüdür.
+
+### İmaj seçimi
+
+1. Mevcut sisteminizle aynı imaj ailesini ve masaüstü ortamını seçin.
+2. Yalnızca dizüstünüzde NVIDIA grafik varsa `nvidia` varyantını seçin.
+3. Günlük kullanım için mevcutsa `stable`, en yeni derleme için `latest`,
+   erken doğrulama için `testing` kullanın.
+
+#### En Son Sürüm imajları
 
 | İmaj | En son sürüm / tarih |
 | --- | --- |
@@ -20,16 +56,10 @@ Her badge GHCR'dan canlı olarak alınır ve en son imaj tag'ini (ve yayımlanma
 | [`bazzite-deck-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) |
 | [`bazzite-deck-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) |
 | [`bazzite-deck-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-tuxedo) |
-| [`bazzite-dx-gnome-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-dx-gnome-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-dx-gnome-nvidia-tuxedo) |
 | [`bazzite-dx-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-dx-gnome-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-dx-gnome-tuxedo) |
 | [`bazzite-dx-nvidia-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-dx-nvidia-gnome-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-gnome-tuxedo) |
 | [`bazzite-dx-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-dx-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-tuxedo) |
 | [`bazzite-dx-tuxedo`](https://ghcr.io/yavasdev/bazzite-dx-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-dx-tuxedo) |
-
-#### N–Z imajları
-
-| İmaj | En son sürüm / tarih |
-| --- | --- |
 | [`bazzite-gdx-tuxedo`](https://ghcr.io/yavasdev/bazzite-gdx-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gdx-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-gdx-tuxedo) |
 | [`bazzite-gnome-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-gnome-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-gnome-nvidia-tuxedo) |
 | [`bazzite-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) |
@@ -42,11 +72,9 @@ Her badge GHCR'dan canlı olarak alınır ve en son imaj tag'ini (ve yayımlanma
 | [`utah-nvidia-tuxedo`](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
 | [`utah-tuxedo`](https://ghcr.io/yavasdev/utah-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-tuxedo) |
 
-Bu depo, uyumlu [Universal Blue](https://universal-blue.org/) taban imajları
-için Tuxedo sürücüleri ve uygulamalarıyla donatılmış özel **Atomik
-(Değişmez) Linux** işletim sistemi imajları oluşturur. Proje öncelikle TUXEDO
-ve diğer Clevo dizüstü bilgisayarları hedefler; farklı Universal Blue imaj
-aileleri ayrı tariflerle desteklenir.
+Bu depo, uyumlu [Universal Blue](https://universal-blue.org/) tabanları üzerinde
+TUXEDO sürücüleri ve uygulamaları bulunan özel **Atomik (değişmez) Linux**
+imajları oluşturur. Farklı Universal Blue aileleri ayrı tariflerle desteklenir.
 
 Aşağıdaki özellikler, seçilen taban imajının üzerine entegre edilir:
 - **Tuxedo Sürücüleri:** Kaynaktan derlenmiş ve doğrudan sisteme dahil edilmiş güncel çekirdek (kernel) modülleri.
@@ -67,30 +95,28 @@ bilgisayarları için Tuxedo sürücüleri ve Tuxedo Control Center ile hazırla
 [BlueBuild](https://blue-build.org/) tarifleri kullanılır ve imajlar bu deponun
 kendi GitHub Container Registry alanına imzalı olarak yayımlanır.
 
-İş akışı her gün **06:00 UTC** saatinde, upstream imajların genellikle derlenmeye
-başlamasından kısa süre sonra çalışır. Böylece kullanıcıların yerel derleme
+İş akışı her gün **06:00 UTC (09:00 UTC+3)** saatinde, upstream imajların genellikle 
+derlenmeye başlamasından kısa süre sonra çalışır. Böylece kullanıcıların yerel derleme
 yapmasına gerek kalmadan imajlar güncel tutulur.
 
 Tarifler BlueBuild'in `dnf` modülünü kullandığı için bu yaklaşım, sisteminde
 DNF desteği bulunan popüler Universal Blue imajlarının çoğuna genişletilebilir.
 Elbette paketlerin ve çekirdek kaynaklarının uyumlu olması gerekir.
 
-### Güçlü yönler
+### Neden uBlue Tuxedo?
 
-- Günlük zamanlanmış derlemeler ve tarif değişikliklerinde derleme.
-- Bazzite, Bluefin, Aurora ve seçili Utah varyantları.
-- Cosign ile imzalanan ve bu depodaki açık anahtarla doğrulanabilen imajlar.
-- Eşleşen çekirdek için derlenen sürücüler ve kurulum script'lerine bağlı
-  olmayan TCC kurulumu.
+- Günlük zamanlanmış derleme yapar.
+- Bazzite, Bluefin, Aurora ve seçili Utah varyantlarını ve potansiyel diğer ublue imajlarını destekler.
+- Cosign ile imzalanan ve bu depodaki açık anahtarla doğrulanabilen imajlar sağlar.
+- Eşleşen çekirdek için derlenen sürücüleri ve kurulum script'lerine bağlı olmayan Tuxedo Control Center kurulumuna izin verir.
 
-### Eski TCC deposu yerine neden bunu seçmeli?
+### Diğer TCC github repo'ları yerine neden bunu seçmeli?
 
-[BrickMan240/ublue-tuxedo-tcc](https://github.com/BrickMan240/ublue-tuxedo-tcc)
-TUXEDO desteği için önemli bir erken seçenekti. Bu depo, bakımı yapılan tarif
-tabanlı bir imaj seti isteyenler için daha uygundur: daha fazla Universal Blue
-varyantı kapsar, güncel BlueBuild iş akışını kullanır, günlük derlenir ve kendi
-imzalı imajlarını yayımlar. Eski proje hâlâ yararlı bir referanstır; ancak
-başlangıçtaki amacı upstream desteği gelişene kadar geçici bir çözüm sunmaktı.
+Bu depo, bakımı yapılan tarif tabanlı bir imaj seti isteyenler için daha uygundur: 
+daha fazla Universal Blue varyantı kapsar, güncel BlueBuild iş akışını kullanır, 
+günlük derlenir ve kendi imzalı imajlarını yayımlar. 
+
+Eski [ublue-tuxedo-tcc projesi](https://github.com/BrickMan240/ublue-tuxedo-tcc) gibi projeler hâlâ yararlı bir referans sağlamaktadır; ancak amaçları upstream desteği gelişene kadar geçici bir çözüm sunmaktı. Bu sorun günümüzde çözülmediği için bu hergün imaj oluşturan repo'yu kurdum.
 
 | Depo | GitHub yıldızları | Son etkinlik | Derleme tetikleyicisi | Registry | İmzalama | Kapsam |
 | --- | ---: | --- | --- | --- | --- | --- |
@@ -100,35 +126,33 @@ başlangıçtaki amacı upstream desteği gelişene kadar geçici bir çözüm s
 Tablodaki yıldız sayıları GitHub'dan canlı olarak yüklenir.
 
 > [!WARNING]
-> Özel imajlar, Fedora projesinde [deneysel bir özelliktir](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), riski size ait olmak üzere deneyin.
+> Özel imajlar [Fedora'da deneysel bir özelliktir](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable). Rebase işlemi işletim sistemi deployment'ınızı değiştirir. Taban imajınızın upstream belgelerini okuyun ve geri alma yöntemini anladığınızdan emin olun.
 
 ## Kurulum
 
 > [!WARNING]
-> Bu işlem, mevcut Atomik Fedora veya Universal Blue işletim sistemi imajınızı
-değiştirecektir. Seçtiğiniz imaj varyantının donanımınız, taban imajınız ve
-mevcut kurulumunuzla uyumlu olduğundan emin olun.
+> Bu işlem, mevcut Atomik Fedora veya Universal Blue işletim sistemi imajınızı değiştirecektir. Seçtiğiniz imaj varyantının donanımınız, taban imajınız ve mevcut kurulumunuzla uyumlu olduğundan emin olun.
+> Yanlış imaj seçiminden yaşanacak sistem bozulmalarından siz sorumlusunuzdur.
 
-> [!WARNING]
-> Bu imajlar deneyseldir ve tamamen test edilmediler. Riski size ait olmak üzere deneyin.
+> [!TIP]
+> Rebase işleminden önce `rpm-ostree status` ile mevcut deployment'ınızı kaydedin ve önyüklenebilir bir geri dönüş seçeneğiniz olduğunu doğrulayın.
 
-### Mevcut Bazzite kullanıcıları
+### Mevcut Atomik kuruluma rebase etme
 
-Mevcut Bazzite kurulumunuzdan rebase işlemine başlamadan önce upstream,
-katmanlı paketleri kaldırmanızı önerir:
+Rebase işleminden önce katmanlı paketleri kaldırmanızı önerir:
 
 ```bash
 rpm-ostree reset
 ```
 
-Donanımınızla uyumlu bir imaj seçin ve rebase sırasında mevcut kurulumunuzla aynı masaüstü ortamını koruyun.
+Donanımınızla uyumlu bir imaj seçin ve mevcut kurulumunuzla aynı masaüstü ortamını koruyun. Aşağıdaki `<image>` ve `<tag>` yerine [Kullanılabilir imajlar](#kullanılabilir-imajlar) ya da [Son etiketlenmiş imaj sürümleri](#son-etiketlenmiş-imaj-sürümleri) bölümündeki adlardan birini yazın.
 
-Yayımlanmış bir imaja geçmek için aşağıdaki komutlarda `<image>` yerine
-kullanmak istediğiniz recipe tarafından oluşturulan imaj adını yazın:
+Yayımlanmış bir imaja geçmek için aşağıdaki komutlarda `<image>` ve `<tag>` yerine
+kullanmak istediğiniz recipe tarafından oluşturulan imaj ve tag'larını yazın:
 
 - İmzalama anahtarlarını ve ilkelerini yüklemek için önce varsayılan imzasız imaja rebase edin:
   ```bash
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/yavasdev/<image>:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/yavasdev/<image>:<tag>
   ```
 - Rebase işlemini tamamlamak için yeniden başlatın:
   ```bash
@@ -136,7 +160,7 @@ kullanmak istediğiniz recipe tarafından oluşturulan imaj adını yazın:
   ```
 - Ardından imzalı imaja geçiş yapın:
   ```bash
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/yavasdev/<image>:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/yavasdev/<image>:<tag>
   ```
 - Kurulumu tamamlamak için tekrar yeniden başlatın:
   ```bash
@@ -144,23 +168,28 @@ kullanmak istediğiniz recipe tarafından oluşturulan imaj adını yazın:
   ```
 
 İmaj adları ve desteklenen varyantlar [`recipes/`](recipes/) klasöründeki
-dosyalarla belirlenir; bu örnek yalnızca Bazzite tabanlı imajlarla sınırlı
-değildir. `latest` etiketi, yapılandırılan Fedora sürümü için en yeni imajı
-gösterir. `stable` etiketi, bunu tanımlayan tariflerde yayımlanır.
+dosyalarla belirlenir; `latest` etiketi, yapılandırılan Fedora sürümü için en yeni imajı
+gösterirken, `stable` etiketi en son çıkmış olan sağlam sürümü ve `testing` etiketi en son çıkmış olan test sürümünü gösterir. Bu tanımlar Recipes klasörü içindeki tariflerde yayımlanır.
+
+### Geri alma
+
+Önceki deployment'a dönmeniz gerekirse önyükleme menüsünden seçin veya:
+
+```bash
+rpm-ostree rollback
+systemctl reboot
+```
 
 ## Recipe ve taban imaj notları
 
-Bu, yalnızca Bazzite'e odaklanan bir depo değil, popüler bir uBlue-tuxedo
-projesidir. Tarifler Bazzite, Bluefin, Aurora ve seçili Project Bluefin
-imajları dahil olmak üzere birden fazla Universal Blue ailesini kapsar. Her
-recipe taban imajı, paketleri, imaj adını ve desteklenen varyantı belirler.
-Güncel ve yetkili liste [`recipes/`](recipes/) klasöründedir.
+Tarifler Bazzite, Bluefin, Aurora ve seçili Project Bluefin imajları dahil olmak 
+üzere birden fazla Universal Blue ailesini kapsar. Her recipe taban imajını, 
+paketleri, imaj adını ve desteklenen varyantı belirler. Güncel ve yetkili liste 
+[`recipes/`](recipes/) klasöründedir.
 
-Utah tarifleri, Utah'ın Hummingbird tabanlı çekirdeğini kullanır. Sabit bir
-Fedora sürümüne veya genel bir `kernel-devel` paketine bağlı kalmak yerine,
-build sırasında eşleşen çekirdek geliştirme dosyalarını dinamik olarak çözer.
-Utah deneysel bir upstream olduğundan çekirdek ve paket kaynakları
-değiştikçe ek uyumluluk çalışması gerekebilir.
+Utah tarifleri, Utah'ın Hummingbird tabanlı çekirdeğini kullanır. Bu tarz imajlar script'de 
+sabit bir Fedora sürümüne veya genel bir `kernel-devel` paketine bağlı kalmak yerine,
+build sırasında eşleşen çekirdek geliştirme dosyalarını dinamik olarak bulup yamalanır.
 
 Project Bluefin Dakota şu anda bu BlueBuild tarifleriyle uyumlu değildir.
 Dakota, burada kullanılan DNF paket yönetimi yerine BuildStream ile oluşturulur.
@@ -180,7 +209,7 @@ sayılmaz.
 | [Bazzite](https://bazzite.gg/) | Bazzite DX KDE | Henüz test edilmedi |
 | [Bazzite](https://bazzite.gg/) | Bazzite DX GNOME | Henüz test edilmedi |
 | [Bazzite](https://bazzite.gg/) | **Bazzite DX NVIDIA** | [**İnsan tarafından test edildi**](docs/tests/bazzite-dx-nvidia-tuxedo/) |
-| [Bazzite](https://bazzite.gg/) | Bazzite DX GNOME NVIDIA | Henüz test edilmedi |
+| [Bazzite](https://bazzite.gg/) | **Bazzite DX GNOME NVIDIA** | [**İnsan tarafından test edildi**](docs/tests/bazzite-dx-nvidia-gnome-tuxedo/) |
 | [Bazzite](https://bazzite.gg/) | Bazzite GDX KDE | Henüz test edilmedi |
 | [Bazzite](https://bazzite.gg/) | Bazzite Deck KDE | Henüz test edilmedi |
 | [Bazzite](https://bazzite.gg/) | Bazzite Deck GNOME | Henüz test edilmedi |
@@ -209,15 +238,14 @@ belirterek [bir issue açın](https://github.com/yavasdev/ublue-tuxedo/issues).
 Bu imajlar, [Sigstore](https://www.sigstore.dev/)'un [cosign](https://github.com/sigstore/cosign) aracı kullanılarak dijital olarak imzalanmıştır. İmajın orijinalliğini doğrulamak için bu depodan `cosign.pub` dosyasını indirebilir ve aşağıdaki komutu çalıştırabilirsiniz:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/yavasdev/<image>:latest
+cosign verify --key cosign.pub ghcr.io/yavasdev/<image>:<tag>
 ```
 
----
----
+## Kurulum ISO'su oluşturma
 
-## Ek Bilgi: ISO Oluşturma (Çevrimdışı Kurulum)
-
-Eğer bu imajı bir USB sürücü kullanarak bir bilgisayara sıfırdan kurmak isterseniz, Fedora Atomik tabanlı bir sistemde kendi ISO dosyanızı oluşturabilirsiniz. Talimatlar için [BlueBuild ISO Rehberi](https://blue-build.org/how-to/generate-iso/#_top)'ne göz atın. *(ISO dosyaları çok büyük olduğundan GitHub üzerinde ücretsiz olarak barındırılamıyor ve ben de bununla uğraşmak istemiyorum).*
+Bir imajı USB sürücüsüyle sıfırdan kurmak için Fedora Atomik tabanlı bir
+sistemde [BlueBuild ISO Rehberi](https://blue-build.org/how-to/generate-iso/#_top)
+ile ISO oluşturun. ISO dosyaları bu depo tarafından sağlanmaz.
 
 ## Potansiyel olarak desteklenebilecek cihazlar
 
@@ -235,7 +263,7 @@ kesin model, CPU/GPU yapılandırması, firmware ve çekirdek sürümü önemlid
 - **Aura:** Aura 14/15 ve diğer Aura yapılandırmaları
 
 Kesin model ve yapılandırmalar için güncel
-[TUXEDO dizüstü bilgisayar listesine](https://www.tuxedocomputers.com/en/Linux-Hardware/Linux-Notebooks.tuxedo)
+[TUXEDO dizüstü bilgisayar](https://www.tuxedocomputers.com/index.php)
 bakabilirsiniz.
 
 ### Clevo tabanlı dizüstü bilgisayarlar
@@ -274,12 +302,11 @@ Clevo cihazlarda rapor açmadan önce firmware veya `dmidecode` ile kasa
 tanımlayıcısını kontrol edin. Lütfen kesin model, Clevo kasa tanımlayıcısı,
 CPU, GPU ve test sonuçlarıyla [bir issue açın](https://github.com/yavasdev/ublue-tuxedo/issues).
 
-<!-- BEGIN TAGGED IMAGE VERSIONS -->
 ## Son etiketlenmiş imaj sürümleri
 
 Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi ise her başarılı derlemeden sonra GitHub Actions tarafından güncellenen küçük JSON dosyalarından gelir. Bir badge'e tıklamak, ilgili canlı GitHub Packages sayfasını açar. GitHub'ın README işleyicisi yan yana Markdown tablolarını güvenilir bir şekilde desteklemediğinden listeler okunabilir iki tabloya bölünmüştür.
 
-#### A–M imajları
+#### İmajlar
 
 | İmaj | Kararlı (stable) sürüm / tarih | Test (testing) sürümü / tarih | En son (latest) sürüm / tarih |
 | --- | --- | --- | --- |
@@ -288,16 +315,10 @@ Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi is
 | `bazzite-deck-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) |
 | `bazzite-deck-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) |
 | `bazzite-deck-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-tuxedo) |
-| `bazzite-dx-gnome-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-dx-gnome-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-dx-gnome-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-dx-gnome-nvidia-tuxedo) |
 | `bazzite-dx-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-dx-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-dx-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-dx-gnome-tuxedo) |
 | `bazzite-dx-nvidia-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-gnome-tuxedo) |
 | `bazzite-dx-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-dx-nvidia-tuxedo) |
 | `bazzite-dx-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-dx-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-dx-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-dx-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-dx-tuxedo) |
-
-#### N–Z imajları
-
-| İmaj | Kararlı (stable) sürüm / tarih | Test (testing) sürümü / tarih | En son (latest) sürüm / tarih |
-| --- | --- | --- | --- |
 | `bazzite-gdx-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gdx-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-gdx-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gdx-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-gdx-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gdx-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-gdx-tuxedo) |
 | `bazzite-gnome-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-gnome-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-gnome-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-gnome-nvidia-tuxedo) |
 | `bazzite-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) |
@@ -309,7 +330,6 @@ Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi is
 | `bluefin-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/stable)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/testing)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/latest)](https://ghcr.io/yavasdev/bluefin-tuxedo) |
 | `utah-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
 | `utah-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/stable)](https://ghcr.io/yavasdev/utah-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/testing)](https://ghcr.io/yavasdev/utah-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/latest)](https://ghcr.io/yavasdev/utah-tuxedo) |
-<!-- END TAGGED IMAGE VERSIONS -->
 
 ## Sınırlamalar ve gelecekteki çalışmalar
 
@@ -330,8 +350,8 @@ Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi is
 - Recipe formatı ve build sistemi için [BlueBuild](https://github.com/blue-build) ve [BlueBuild GitHub Action](https://github.com/blue-build/github-action).
 - Bazzite, Bluefin ve Aurora taban imajlarının bakıcıları ve [Universal Blue](https://github.com/ublue-os).
 - Sürücüler ve Tuxedo Control Center için [TUXEDO Computers](https://github.com/tuxedocomputers).
-- Proje katkıda bulunanları ve kod sahipleri: [@yavasdev](https://github.com/yavasdev), [@xynydev](https://github.com/xynydev) ve [@fiftydinar](https://github.com/fiftydinar).
+- Proje katkıda bulunanları ve kod sahipleri: [@yavasdev](https://github.com/yavasdev).
 
 ## Depo geçmişi
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yavasdev/ublue-tuxedo%2CBrickMan240/ublue-tuxedo-tcc&type=Date)](https://star-history.com/#yavasdev/ublue-tuxedo&BrickMan240/ublue-tuxedo-tcc&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=yavasdev/ublue-tuxedo&type=Date)](https://star-history.com/#yavasdev/ublue-tuxedo&Date)
