@@ -15,7 +15,7 @@ modules:
     files:
       - source: system
         destination: /
-      - source: opionated/system
+      - source: opinionated/system
         destination: /
 
   # custom package removal
