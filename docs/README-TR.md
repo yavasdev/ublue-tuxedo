@@ -45,9 +45,10 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
    erken doğrulama için `testing` kullanın.
 
 #### En Son Sürüm imajları
+
+##### Bazzite İmajları
 | İmaj | En son sürüm / tarih |
 | --- | --- |
-| [`aurora-tuxedo`](https://ghcr.io/yavasdev/aurora-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/aurora-tuxedo) |
 | [`bazzite-deck-gnome-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) |
 | [`bazzite-deck-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) |
 | [`bazzite-deck-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) |
@@ -61,12 +62,22 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
 | [`bazzite-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) |
 | [`bazzite-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-nvidia-tuxedo) |
 | [`bazzite-tuxedo`](https://ghcr.io/yavasdev/bazzite-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bazzite-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-tuxedo) |
+
+##### Bluefin İmajları
+| İmaj | En son sürüm / tarih |
+| --- | --- |
 | [`bluefin-dx-nvidia-tuxedo`](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) |
 | [`bluefin-dx-tuxedo`](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) |
 | [`bluefin-nvidia-tuxedo`](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) |
 | [`bluefin-tuxedo`](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-tuxedo) |
 | [`utah-nvidia-tuxedo`](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
 | [`utah-tuxedo`](https://ghcr.io/yavasdev/utah-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-tuxedo) |
+
+##### Aurora İmajları
+| İmaj | En son sürüm / tarih |
+| --- | --- |
+| [`aurora-tuxedo`](https://ghcr.io/yavasdev/aurora-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/aurora-tuxedo) |
+| [`aurora-nvidia-open-tuxedo`](https://ghcr.io/yavasdev/aurora-nvidia-open-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/aurora-nvidia-open-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/aurora-nvidia-open-tuxedo) |
 
 Bu depo, uyumlu [Universal Blue](https://universal-blue.org/) tabanları üzerinde
 TUXEDO sürücüleri ve uygulamaları bulunan özel **Atomik (değişmez) Linux**
@@ -302,11 +313,10 @@ CPU, GPU ve test sonuçlarıyla [bir issue açın](https://github.com/yavasdev/u
 
 Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi ise her başarılı derlemeden sonra GitHub Actions tarafından güncellenen küçük JSON dosyalarından gelir. Bir badge'e tıklamak, ilgili canlı GitHub Packages sayfasını açar. GitHub'ın README işleyicisi yan yana Markdown tablolarını güvenilir bir şekilde desteklemediğinden listeler okunabilir iki tabloya bölünmüştür.
 
-#### İmajlar
+### Bazzite İmajları
 
 | İmaj | Kararlı (stable) sürüm / tarih | Test (testing) sürümü / tarih | En son (latest) sürüm / tarih |
 | --- | --- | --- | --- |
-| `aurora-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/stable)](https://ghcr.io/yavasdev/aurora-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/testing)](https://ghcr.io/yavasdev/aurora-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/latest)](https://ghcr.io/yavasdev/aurora-tuxedo) |
 | `bazzite-deck-gnome-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) |
 | `bazzite-deck-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) |
 | `bazzite-deck-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) |
@@ -320,12 +330,24 @@ Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi is
 | `bazzite-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) |
 | `bazzite-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-nvidia-tuxedo) |
 | `bazzite-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-tuxedo) |
+
+### Bluefin İmajları
+
+| İmaj | Kararlı (stable) sürüm / tarih | Test (testing) sürümü / tarih | En son (latest) sürüm / tarih |
+| --- | --- | --- | --- |
 | `bluefin-dx-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) |
 | `bluefin-dx-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/stable)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/testing)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/latest)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) |
 | `bluefin-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) |
 | `bluefin-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/stable)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/testing)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/latest)](https://ghcr.io/yavasdev/bluefin-tuxedo) |
 | `utah-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
 | `utah-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/stable)](https://ghcr.io/yavasdev/utah-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/testing)](https://ghcr.io/yavasdev/utah-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/latest)](https://ghcr.io/yavasdev/utah-tuxedo) |
+
+### Aurora İmajları
+
+| İmaj | Kararlı (stable) sürüm / tarih | Test (testing) sürümü / tarih | En son (latest) sürüm / tarih |
+| --- | --- | --- | --- |
+| `aurora-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/stable)](https://ghcr.io/yavasdev/aurora-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/testing)](https://ghcr.io/yavasdev/aurora-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/latest)](https://ghcr.io/yavasdev/aurora-tuxedo) |
+| `aurora-nvidia-open-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/aurora-nvidia-open-tuxedo/stable)](https://ghcr.io/yavasdev/aurora-nvidia-open-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/aurora-nvidia-open-tuxedo/testing)](https://ghcr.io/yavasdev/aurora-nvidia-open-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/aurora-nvidia-open-tuxedo/latest)](https://ghcr.io/yavasdev/aurora-nvidia-open-tuxedo) |
 
 ## Sınırlamalar ve gelecekteki çalışmalar
 
