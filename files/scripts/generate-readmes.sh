@@ -10,8 +10,11 @@ declare -A REPLACEMENTS=(
     ["{{BADGE_URL}}"]="https://ghcr-badge.egpl.dev"
     ["{{AUTHOR}}"]="yavasdev"
     ["{{REPO_NAME}}"]="ublue-tuxedo"
-    ["{{TAGS}}"]="tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3"
+    ["{{TAGS}}"]="tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3"
     ["{{SIZE}}"]="size?color=%2326a269&tag=stable&label=latest+image+size"
+    ["{{LATEST_TAG_LATEST}}"]="latest_tag?label=latest&ignore=*-*-*,sha*,stable*,testing*,latest"
+    ["{{LATEST_TAG_STABLE}}"]="latest_tag?label=stable&ignore=*-*-*,sha*,latest*,testing*,stable"
+    ["{{LATEST_TAG_TESTING}}"]="latest_tag?label=testing&ignore=*-*-*,sha*,latest*,stable*,testing"
 )
 
 # List of template files to process
@@ -58,6 +61,42 @@ for template in "${TEMPLATES[@]}"; do
         sed -e "s|${key}|${escaped_value}|g" "$output" > "${output}.tmp"
         mv "${output}.tmp" "$output"
     done
+
+# --- NEW: FALLBACK BADGE LOGIC ---
+    echo " -> Checking badges for missing tags in $output..."
+    # 1. Find all badge URLs in the generated markdown
+    grep -oE 'https://ghcr-badge\.egpl\.dev[^ )"]+' "$output" | sort -u | while read -r url; do
+        
+        # 2. Fetch the actual content of the URL silently
+        body=$(curl -s "$url")
+        
+        # 3. Check if the response contains valid SVG code.
+        # If it doesn't contain "<svg" (e.g., it is a JSON error), apply the fallback!
+        if [[ "$body" != *"<svg"* ]]; then
+            echo "    [Broken Badge detected] applying fallback for: $url"
+            
+            # Determine what the fallback badge should say based on the URL
+            if [[ "$url" == *"label=latest"* ]]; then
+                fallback="https://img.shields.io/badge/latest-none-lightgrey"
+            elif [[ "$url" == *"label=testing"* ]]; then
+                fallback="https://img.shields.io/badge/testing-none-lightgrey"
+            elif [[ "$url" == *"label=stable"* ]]; then
+                fallback="https://img.shields.io/badge/stable-none-lightgrey"
+            elif [[ "$url" == *"size?"* ]]; then
+                fallback="https://img.shields.io/badge/size-none-lightgrey"
+            else
+                fallback="https://img.shields.io/badge/status-none-lightgrey"
+            fi
+            
+            # Escape dots and asterisks so sed doesn't misinterpret the URL
+            escaped_url=$(echo "$url" | sed -e 's/\./\\./g' -e 's/\*/\\*/g')
+            
+            # Replace the broken link with the working fallback badge
+            sed -e "s|${escaped_url}|${fallback}|g" "$output" > "${output}.tmp"
+            mv "${output}.tmp" "$output"
+        fi
+    done
+    # ---------------------------------
 
     if grep -qE '\{\{[^}]+\}\}' "$output"; then
         echo "Error: unresolved template variables remain in $output." >&2
