@@ -3,7 +3,6 @@
 ### Universal Blue images for TUXEDO and Clevo laptops
 
 [![GitHub stars](https://img.shields.io/github/stars/yavasdev/ublue-tuxedo?style=flat)](https://github.com/yavasdev/ublue-tuxedo/stargazers)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/yavasdev/ublue-tuxedo/badge)](https://scorecard.dev/viewer/?uri=github.com/yavasdev/ublue-tuxedo)
 [![Build images](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/build.yml/badge.svg)](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/build.yml)
 [![Update README](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/update-readme.yml/badge.svg)](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/update-readme.yml)
 
