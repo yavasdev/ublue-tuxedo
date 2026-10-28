@@ -50,4 +50,7 @@ modules:
       enabled:
         - tccd.service
 
+  # Rebuilds the initramfs to include the new modprobe file.
+  - type: initramfs  
+
   - type: signing
