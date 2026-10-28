@@ -15,7 +15,6 @@
 uBlue Tuxedo provides ready-to-use [Universal Blue](https://universal-blue.org/) images with TUXEDO drivers and **Tuxedo Control Center (TCC)** included. It targets TUXEDO and Clevo-based laptops and publishes new builds automatically with [BlueBuild](https://blue-build.org/).
 
 ## Start here
-
 | I want to... | Go to |
 | --- | --- |
 | Choose an image | [Available images](#available-images) |
@@ -26,7 +25,6 @@ uBlue Tuxedo provides ready-to-use [Universal Blue](https://universal-blue.org/)
 | Report a compatibility result | [Open an issue](https://github.com/yavasdev/ublue-tuxedo/issues) |
 
 ## What you get
-
 - **TUXEDO kernel drivers** compiled against the matching kernel.
 - **Tuxedo Control Center** for hardware, fan, and power management.
 - **Universal Blue choices** across Bazzite, Bluefin, Aurora, and selected Utah variants.
@@ -34,17 +32,14 @@ uBlue Tuxedo provides ready-to-use [Universal Blue](https://universal-blue.org/)
 - **Signed images** published to GitHub Container Registry and verifiable with Cosign.
 
 ## Available images
-
 Builds run automatically every day. Each badge shows the latest published tag and date; click an image name or badge to open its GitHub Container Registry package. The authoritative image definitions are in [`recipes/`](recipes/).
 
 ### Choosing an image
-
 1. Choose the same image family and desktop environment you already use.
 2. Choose an `nvidia` variant only if your laptop uses NVIDIA graphics.
 3. Use `stable` for daily use when it is available; use `latest` for the newest build and `testing` for early validation.
 
 #### Latest Images
-
 | Image | Latest version / date |
 | --- | --- |
 | [`aurora-tuxedo`](https://ghcr.io/yavasdev/aurora-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/aurora-tuxedo) |
@@ -77,7 +72,6 @@ The recipes integrate the following features on top of their selected base image
 The recipes use BlueBuild's `dnf` module for package installation. TCC is downloaded during the image build, unpacked without running service-management scripts, and its systemd units are linked into the standard systemd directory. Kernel modules are compiled against the matching kernel development tree; when the base repositories do not provide it, the build resolves the kernel's Fedora release and downloads the exact `kernel-devel` package from Fedora Koji.
 
 ## About this repository
-
 This repository turns popular Universal Blue images into TUXEDO/Clevo-friendly images with Tuxedo drivers and Tuxedo Control Center included. It is built with [BlueBuild](https://blue-build.org/) recipes and publishes signed images to its own GitHub Container Registry repository.
 
 The workflow runs every day at **06:00 UTC**, shortly after the upstream images usually begin building. This keeps the images up to date without requiring users to maintain a local build.
@@ -85,14 +79,12 @@ The workflow runs every day at **06:00 UTC**, shortly after the upstream images 
 Because the recipes use BlueBuild's `dnf` module, this approach can extend to most popular Universal Blue images that include DNF support in their system, subject to compatible packages and kernel sources.
 
 ### Why uBlue Tuxedo?
-
 - Performs daily scheduled builds.
 - Supports Bazzite, Bluefin, Aurora, and selected Utah variants, as well as potential other ublue images.
 - Provides images signed with Cosign that can be verified using the public key in this repository.
 - Provides drivers compiled for the matching kernel and allows for a Tuxedo Control Center installation without relying on installation scripts.
 
 ### Why choose this over other TCC github repos?
-
 This repository is better suited for those who want a maintained, recipe-based image set: it covers more Universal Blue variants, uses the current BlueBuild workflow, builds daily, and publishes its own signed images. 
 
 Older projects like the [ublue-tuxedo-tcc project](https://github.com/BrickMan240/ublue-tuxedo-tcc) still provide a useful reference; however, their goal was to offer a temporary workaround until upstream support improved. Since this issue remains unresolved today, I created this repo that generates images every day.

@@ -26,7 +26,6 @@ uBlue Tuxedo, TUXEDO sürücüleri ve **Tuxedo Control Center (TCC)** içeren ku
 | Uyumluluk sonucu bildirmek | [Bir issue açın](https://github.com/yavasdev/ublue-tuxedo/issues) |
 
 ## Neler dahil?
-
 - **TUXEDO çekirdek sürücüleri:** Eşleşen çekirdeğe karşı derlenir.
 - **Tuxedo Control Center:** Donanım, fan ve güç yönetimi.
 - **Universal Blue seçenekleri:** Bazzite, Bluefin, Aurora ve seçili Utah varyantları.
@@ -34,21 +33,18 @@ uBlue Tuxedo, TUXEDO sürücüleri ve **Tuxedo Control Center (TCC)** içeren ku
 - **İmzalı imajlar:** GitHub Container Registry'de yayımlanır ve Cosign ile doğrulanabilir.
 
 ## Kullanılabilir imajlar
-
 Derlemeler her gün otomatik olarak yapılır. Her badge, yayımlanan en son tag'i
 ve tarihi gösterir; imajın adına veya badge'ine tıklayarak GitHub Container
 Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
 [`recipes/`](recipes/) klasörüdür.
 
 ### İmaj seçimi
-
 1. Mevcut sisteminizle aynı imaj ailesini ve masaüstü ortamını seçin.
 2. Yalnızca dizüstünüzde NVIDIA grafik varsa `nvidia` varyantını seçin.
 3. Günlük kullanım için mevcutsa `stable`, en yeni derleme için `latest`,
    erken doğrulama için `testing` kullanın.
 
 #### En Son Sürüm imajları
-
 | İmaj | En son sürüm / tarih |
 | --- | --- |
 | [`aurora-tuxedo`](https://ghcr.io/yavasdev/aurora-tuxedo) | [![En son sürüm](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/aurora-tuxedo) |
