@@ -3,6 +3,8 @@
 
 name: bazzite-dx-nvidia-gnome-yavasdev
 description: Bazzite DX Nvidia Gnome with Tuxedo drivers and Control Center and some custom settings.
+# basically I added tuxedo drivers like others do but also fixed the lutris
+# with uninstalling system lutris and adding flatpak lutris to system scope.
 
 alt-tags:
   - stable
@@ -15,8 +17,10 @@ modules:
     files:
       - source: system
         destination: /
-      - source: opinionated/system
-        destination: /
+      
+      # uncomment if you want to add lutris flatpak path
+      - source: opinionated/system/etc/usr/bin/lutris
+        destination: /etc/usr/bin/lutris
 
   # custom package removal
   - type: rpm-ostree
@@ -24,7 +28,7 @@ modules:
       # remove broken system lutris
       - lutris
     
-  # add flatpak lutris
+  # uncomment if you want to add flatpak lutris
   - type: default-flatpaks
     configurations:
       - scope: system
