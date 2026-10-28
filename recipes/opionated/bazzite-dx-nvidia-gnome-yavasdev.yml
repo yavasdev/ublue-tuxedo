@@ -11,7 +11,7 @@ base-image: ghcr.io/ublue-os/bazzite-dx-nvidia-gnome
 image-version: stable
 
 modules:
-    - type: files
+  - type: files
     files:
       - source: system
         destination: /
