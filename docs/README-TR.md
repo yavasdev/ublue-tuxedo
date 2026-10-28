@@ -1,5 +1,4 @@
 # uBlue Tuxedo — TUXEDO ve Clevo Dizüstü Bilgisayarları için Universal Blue İmajları
-[![Latest build](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/yavasdev/ublue-tuxedo/actions/workflows/build.yml)
 [![GitHub stars](https://img.shields.io/github/stars/yavasdev/ublue-tuxedo?style=flat)](https://github.com/yavasdev/ublue-tuxedo/stargazers)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/yavasdev/ublue-tuxedo/badge)](https://scorecard.dev/viewer/?uri=github.com/yavasdev/ublue-tuxedo)
 
