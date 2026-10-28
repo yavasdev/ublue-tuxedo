@@ -17,7 +17,7 @@ uBlue Tuxedo provides ready-to-use [Universal Blue](https://universal-blue.org/)
 ## Start here
 | I want to... | Go to |
 | --- | --- |
-| Choose an image | [Available images](#available-images) |
+| Choose an image | [Available Latest Images](#available-images) |
 | Install on an existing Atomic system | [Installation](#installation) |
 | Check whether my laptop is a good candidate | [Potentially supported devices](#potentially-supported-devices) |
 | Confirm an image is authentic | [Verification](#verification) |
@@ -31,7 +31,7 @@ uBlue Tuxedo provides ready-to-use [Universal Blue](https://universal-blue.org/)
 - **Automated updates** from daily builds and recipe changes.
 - **Signed images** published to GitHub Container Registry and verifiable with Cosign.
 
-## Available images
+## Available Images
 Builds run automatically every day. Each badge shows the latest published tag and date; click an image name or badge to open its GitHub Container Registry package. The authoritative image definitions are in [`recipes/`](recipes/).
 
 ### Choosing an image
@@ -39,10 +39,9 @@ Builds run automatically every day. Each badge shows the latest published tag an
 2. Choose an `nvidia` variant only if your laptop uses NVIDIA graphics.
 3. Use `stable` for daily use when it is available; use `latest` for the newest build and `testing` for early validation.
 
-#### Latest Images
+### Bazzite Images
 | Image | Latest version / date |
 | --- | --- |
-| [`aurora-tuxedo`](https://ghcr.io/yavasdev/aurora-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/aurora-tuxedo) |
 | [`bazzite-deck-gnome-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) |
 | [`bazzite-deck-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) |
 | [`bazzite-deck-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) |
@@ -56,12 +55,22 @@ Builds run automatically every day. Each badge shows the latest published tag an
 | [`bazzite-gnome-tuxedo`](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) |
 | [`bazzite-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-nvidia-tuxedo) |
 | [`bazzite-tuxedo`](https://ghcr.io/yavasdev/bazzite-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-tuxedo) |
+
+##### Bluefin Images
+| Image | Latest version / date |
+| --- | --- |
 | [`bluefin-dx-nvidia-tuxedo`](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) |
 | [`bluefin-dx-tuxedo`](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) |
 | [`bluefin-nvidia-tuxedo`](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) |
 | [`bluefin-tuxedo`](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-tuxedo) |
 | [`utah-nvidia-tuxedo`](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
 | [`utah-tuxedo`](https://ghcr.io/yavasdev/utah-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-tuxedo) |
+
+##### Aurora Images
+| Image | Latest version / date |
+| --- | --- |
+| [`aurora-tuxedo`](https://ghcr.io/yavasdev/aurora-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/aurora-tuxedo) |
+| [`aurora-nvidia-open-tuxedo`](https://ghcr.io/yavasdev/aurora-nvidia-open-tuxedo) | [![Latest version](https://ghcr-badge.egpl.dev/yavasdev/aurora-nvidia-open-tuxedo/tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/aurora-nvidia-open-tuxedo) |
 
 This repository builds custom **Atomic (immutable) Linux** images with TUXEDO drivers and applications on compatible [Universal Blue](https://universal-blue.org/) bases. Separate recipes support multiple Universal Blue families.
 
@@ -249,11 +258,10 @@ For Clevo devices, check the chassis identifier reported by the firmware or `dmi
 
 The badge links are static, while their displayed version and publication date come from small JSON files refreshed by GitHub Actions after each successful build. Clicking a badge opens the corresponding live GitHub Packages page. GitHub README rendering does not reliably support side-by-side Markdown tables, so the lists are split into two readable tables.
 
-#### Images
+### Bazzite Images
 
 | Image | Stable version / date | Testing version / date | Latest version / date |
 | --- | --- | --- | --- |
-| `aurora-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/stable)](https://ghcr.io/yavasdev/aurora-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/testing)](https://ghcr.io/yavasdev/aurora-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/latest)](https://ghcr.io/yavasdev/aurora-tuxedo) |
 | `bazzite-deck-gnome-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) |
 | `bazzite-deck-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-gnome-tuxedo) |
 | `bazzite-deck-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-deck-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-deck-nvidia-tuxedo) |
@@ -267,12 +275,24 @@ The badge links are static, while their displayed version and publication date c
 | `bazzite-gnome-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-gnome-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-gnome-tuxedo) |
 | `bazzite-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-nvidia-tuxedo) |
 | `bazzite-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-tuxedo/stable)](https://ghcr.io/yavasdev/bazzite-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-tuxedo/testing)](https://ghcr.io/yavasdev/bazzite-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bazzite-tuxedo/latest)](https://ghcr.io/yavasdev/bazzite-tuxedo) |
+
+### Bluefin Images
+
+| Image | Stable version / date | Testing version / date | Latest version / date |
+| --- | --- | --- | --- |
 | `bluefin-dx-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) |
 | `bluefin-dx-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/stable)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/testing)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-dx-tuxedo/latest)](https://ghcr.io/yavasdev/bluefin-dx-tuxedo) |
 | `bluefin-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/bluefin-nvidia-tuxedo) |
 | `bluefin-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/stable)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/testing)](https://ghcr.io/yavasdev/bluefin-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/bluefin-tuxedo/latest)](https://ghcr.io/yavasdev/bluefin-tuxedo) |
 | `utah-nvidia-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/stable)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/testing)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-nvidia-tuxedo/latest)](https://ghcr.io/yavasdev/utah-nvidia-tuxedo) |
 | `utah-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/stable)](https://ghcr.io/yavasdev/utah-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/testing)](https://ghcr.io/yavasdev/utah-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/utah-tuxedo/latest)](https://ghcr.io/yavasdev/utah-tuxedo) |
+
+### Aurora Images
+
+| Image | Stable version / date | Testing version / date | Latest version / date |
+| --- | --- | --- | --- |
+| `aurora-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/stable)](https://ghcr.io/yavasdev/aurora-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/testing)](https://ghcr.io/yavasdev/aurora-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/aurora-tuxedo/latest)](https://ghcr.io/yavasdev/aurora-tuxedo) |
+| `aurora-nvidia-open-tuxedo` | [![stable version](https://ghcr-badge.egpl.dev/yavasdev/aurora-nvidia-open-tuxedo/stable)](https://ghcr.io/yavasdev/aurora-nvidia-open-tuxedo) | [![testing version](https://ghcr-badge.egpl.dev/yavasdev/aurora-nvidia-open-tuxedo/testing)](https://ghcr.io/yavasdev/aurora-nvidia-open-tuxedo) | [![latest version](https://ghcr-badge.egpl.dev/yavasdev/aurora-nvidia-open-tuxedo/latest)](https://ghcr.io/yavasdev/aurora-nvidia-open-tuxedo) |
 
 ## Limitations and future work
 
