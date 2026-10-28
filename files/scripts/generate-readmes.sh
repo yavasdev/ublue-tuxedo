@@ -11,6 +11,7 @@ declare -A REPLACEMENTS=(
     ["{{AUTHOR}}"]="yavasdev"
     ["{{REPO_NAME}}"]="ublue-tuxedo"
     ["{{TAGS}}"]="tags?label=release&ignore=*-*-*,sha256-*,stable,latest,testing&n=3"
+    ["{{SIZE}}"]="size?color=%2326a269&tag=stable&label=latest+image+size"
 )
 
 # List of template files to process
