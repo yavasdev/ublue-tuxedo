@@ -10,10 +10,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
 
 jobs:
-  delete-older-than-30:
+  delete-older-than-90:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete Images Older Than 30 Days
+      - name: Delete Images Older Than 90 Days
         uses: dataaxiom/ghcr-cleanup-action@v1.2.2
         with:
           # 1. Use a PAT instead of GITHUB_TOKEN
@@ -29,7 +29,7 @@ jobs:
           # 3. Enable wildcard expansion for the packages input
           expand-packages: true
           
-          older-than: 30 days
+          older-than: 90 days
           delete-orphaned-images: true
           keep-n-tagged: 7
           keep-n-untagged: 7
