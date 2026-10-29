@@ -17,10 +17,6 @@ modules:
     files:
       - source: system
         destination: /
-      
-      # uncomment if you want to add lutris flatpak path
-      - source: opinionated/system/usr/bin/lutris
-        destination: /usr/bin/lutris
 
   # custom package removal
   - type: rpm-ostree
@@ -34,6 +30,12 @@ modules:
       - scope: system
         install:
           - net.lutris.Lutris
+
+  - type: files
+    files:
+      # uncomment if you want to add lutris flatpak path
+      - source: opinionated/system/usr/bin/lutris
+        destination: /usr/bin/lutris
 
   - type: dnf
     install:
