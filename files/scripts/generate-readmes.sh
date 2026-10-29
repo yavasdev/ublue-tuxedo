@@ -7,7 +7,7 @@ set -euo pipefail
 
 # Define as many placeholders and their replacements as needed.
 declare -A REPLACEMENTS=(
-    ["{{BADGE_URL}}"]="https://ghcr-badge.egpl.dev"
+    ["{{BADGE_URL}}"]="https://ublue-badge-server.yavas.dev"
     ["{{AUTHOR}}"]="yavasdev"
     ["{{REPO_NAME}}"]="ublue-tuxedo"
     ["{{TAGS}}"]="tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3"
@@ -65,8 +65,9 @@ for template in "${TEMPLATES[@]}"; do
 # --- NEW: FALLBACK BADGE LOGIC ---
     echo " -> Checking badges for missing tags in $output..."
     # 1. Find all badge URLs in the generated markdown
-    grep -oE 'https://ghcr-badge\.egpl\.dev[^ )"]+' "$output" | sort -u | while read -r url; do
-        
+    # grep -oE 'https://ghcr-badge\.egpl\.dev[^ )"]+' "$output" | sort -u | while read -r url; do
+    grep -oE 'https://ublue-badge-server\.yavas\.dev[^ )"]+' "$output" | sort -u | while read -r url; do
+
         # 2. Fetch the actual content of the URL silently
         body=$(curl -s "$url")
         
