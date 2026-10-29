@@ -47,7 +47,7 @@ modules:
         - curl
         - wget
         - cpio
-        - kernel-devel
+        - kernel-devel-matched
 
   - type: script
     scripts:
