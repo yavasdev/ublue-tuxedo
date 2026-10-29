@@ -5,10 +5,14 @@ on:
     branches:
       - main
       - main-test
+    paths:
+      - "**.template.md"
   pull_request:
     branches:
       - main
       - main-test
+    paths:
+      - "**.template.md"
   workflow_dispatch:
 
 jobs:
