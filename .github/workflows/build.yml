@@ -10,6 +10,7 @@ on:
     paths-ignore: # don't rebuild if only documentation have changed
       - "**.md"
       - "docs/**"
+      - "recipes/opinionated/**"
 
   workflow_dispatch: # allow manually triggering builds
 
@@ -29,7 +30,7 @@ jobs:
       - uses: actions/checkout@v7
       - id: find-recipes
         run: |
-          recipes=$(find recipes -maxdepth 3 -type f -name '*.yml' ! -name 'recipe-example.yml' ! -empty -printf '%P\n' | sort | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          recipes=$(find recipes -maxdepth 3 -type f -name '*.yml' ! -name 'recipe-example.yml' ! -path 'recipes/opinionated/*' ! -empty -printf '%P\n' | sort | jq -R -s -c 'split("\n") | map(select(length > 0))')
           echo "matrix={\"recipe\":$recipes}" >> "$GITHUB_OUTPUT"
 
   bluebuild:
@@ -52,9 +53,10 @@ jobs:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
-          pr_event_number: ${{ github.event.number }}
-
+          # we are disabling it because don't want to build the image on every PR
+          pr_event_number: "" #${{ github.event.number }} 
           # enabled by default, disable if your image is small and you want faster builds
+          # devnote: we are creating a nvidia bloated distro images, we of course want to maximize build space
           maximize_build_space: true
   
   build-success:
