@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       older_than_input:
-        description: 'How old should the images be to be deleted? X days.'
+        description: 'How old should the images be to be deleted? (e.g., 365 days, 52 weeks, 12 months, 1 years). Example: 90 days'
         required: false
         default: '90 days'
         type: string
