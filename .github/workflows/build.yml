@@ -72,23 +72,3 @@ jobs:
         run: |
           test "$RECIPES_RESULT" = "success"
           test "$BLUEBUILD_RESULT" = "success"
-
-  dependabot:
-    name: dependabot auto-merge
-    needs: build-success
-    permissions:
-      contents: write
-      pull-requests: write
-    runs-on: ubuntu-latest
-    if: >-
-      ${{
-        github.event_name == 'pull_request' &&
-        github.event.pull_request.user.login == 'dependabot[bot]' &&
-        needs.build-success.result == 'success'
-      }}
-    steps:
-      - name: "Merge Dependabot Pull Request automatically"
-        run: gh pr merge --auto --squash "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
