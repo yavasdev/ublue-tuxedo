@@ -41,6 +41,7 @@ Builds run automatically every day. Each badge shows the latest published tag an
 3. Use `stable` for daily use when it is available; use `latest` for the newest build and `testing` for early validation.
 
 ### Bazzite Images
+
 | Image | Latest versions | Size |
 | --- | --- | --- |
 | [`bazzite-deck-gnome-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) |
@@ -58,6 +59,7 @@ Builds run automatically every day. Each badge shows the latest published tag an
 | [`bazzite-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) |
 
 ##### Bluefin Images
+
 | Image | Latest versions | Size |
 | --- | --- | --- |
 | [`bluefin-dx-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) |
@@ -68,6 +70,7 @@ Builds run automatically every day. Each badge shows the latest published tag an
 | [`utah-tuxedo`](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/utah-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/utah-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) |
 
 ##### Aurora Images
+
 | Image | Latest versions | Size |
 | --- | --- | --- |
 | [`aurora-tuxedo`](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) |
