@@ -366,10 +366,14 @@ The badge links are static, while their displayed version and publication date c
 - [ ] Investigate repository and base-image tag checks beyond `recipes/`.
 - [ ] Evaluate automatic discovery of new supported base repositories.
 - [ ] Reduce repeated recipe configuration with manifests or shared declarative components.
+- [ ] Maybe refactor current `build-tuxedo.sh` logic.
+  - [ ] kernel-devel -> kernel-devel-matched
+  - [ ] using akmods?
+  - [ ] using koji executable kernel-devel with all recipes for better compatibility  
 - [ ] Expand hardware testing and document confirmed laptop models.
-- [ ] Create your own "https://ghcr-badge.domain.example".
+- [X] Create your own "https://ghcr-badge.domain.example". (for better badge system)
 - [ ] Add Date support to `ghrc-badge` project as contribution (use it on your fork until they merge).
-- [ ] Add dates columns to readme's tables.
+- [ ] Add dates columns to readme's tables after create your own fork that capable of this.
 
 ## Credits
 
