@@ -48,6 +48,7 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
 #### En Son Sürüm imajları
 
 ##### Bazzite İmajları
+
 | İmaj | En son Sürüm İmajlar | Boyut |
 | --- | --- | --- |
 | [`bazzite-deck-gnome-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/bazzite-deck-gnome-nvidia-tuxedo) |
@@ -65,6 +66,7 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
 | [`bazzite-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bazzite-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) |
 
 ##### Bluefin İmajları
+
 | İmaj | En son sürüm | Boyut |
 | --- | --- | --- |
 | [`bluefin-dx-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) |
@@ -75,6 +77,7 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
 | [`utah-tuxedo`](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/utah-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/utah-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) |
 
 ##### Aurora İmajları
+
 | İmaj | En son sürüm | Boyut |
 | --- | --- | --- |
 | [`aurora-tuxedo`](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![En son sürüm]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) |
