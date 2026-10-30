@@ -58,8 +58,8 @@ Builds run automatically every day. Each badge shows the latest published tag an
 | [`bazzite-tuxedo`](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bazzite-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/bazzite-tuxedo) |
 
 ##### Bluefin Images
-| Image | Latest version |
-| --- | --- |
+| Image | Latest versions | Size |
+| --- | --- | --- |
 | [`bluefin-dx-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/bluefin-dx-nvidia-tuxedo) |
 | [`bluefin-dx-tuxedo`](https://ghcr.io/{{AUTHOR}}/bluefin-dx-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bluefin-dx-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-dx-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/bluefin-dx-tuxedo) |
 | [`bluefin-nvidia-tuxedo`](https://ghcr.io/{{AUTHOR}}/bluefin-nvidia-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-nvidia-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/bluefin-nvidia-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/bluefin-nvidia-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/bluefin-nvidia-tuxedo) |
@@ -68,8 +68,8 @@ Builds run automatically every day. Each badge shows the latest published tag an
 | [`utah-tuxedo`](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/utah-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/utah-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/utah-tuxedo) |
 
 ##### Aurora Images
-| Image | Latest version |
-| --- | --- |
+| Image | Latest versions | Size |
+| --- | --- | --- |
 | [`aurora-tuxedo`](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/aurora-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/aurora-tuxedo) |
 | [`aurora-nvidia-open-tuxedo`](https://ghcr.io/{{AUTHOR}}/aurora-nvidia-open-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/aurora-nvidia-open-tuxedo/{{TAGS}})](https://ghcr.io/{{AUTHOR}}/aurora-nvidia-open-tuxedo) | [![Latest version]({{BADGE_URL}}/{{AUTHOR}}/aurora-nvidia-open-tuxedo/{{SIZE}})](https://ghcr.io/{{AUTHOR}}/aurora-nvidia-open-tuxedo) |
 
