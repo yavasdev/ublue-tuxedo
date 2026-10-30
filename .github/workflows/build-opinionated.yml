@@ -32,7 +32,6 @@ jobs:
       - uses: actions/checkout@v7
       - id: find-recipes
         run: |
-          # Use 'opinionated/%P\n' so the output path is relative to 'recipes/'
           matrix=$(find recipes/opinionated -maxdepth 3 -type f \( -name '*.yml' -o -name '*.yaml' \) \
             ! -name 'recipe-example.yml' \
             ! -empty \
