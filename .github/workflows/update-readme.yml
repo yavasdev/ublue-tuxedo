@@ -41,3 +41,46 @@ jobs:
         
       - name: Commit and push changes
         run: bash files/scripts/git-check-and-push.sh
+
+  build-pages:
+    name: Build GitHub Pages
+    needs: update-readme
+    # Only build Pages on main branch pushes or manual dispatch (not on PRs or test branches)
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          # Pull latest commit containing the newly pushed README
+          ref: main
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Inject Google Site Verification Meta Tag
+        run: |
+          META_TAG='<meta name="google-site-verification" content="7plxI9J4gy4xZL4KgJW1PPY-M4DJgyxxEqQnsrL4ktg" />'
+          sudo sed -i "s|</head>|$META_TAG\n</head>|g" ./_site/index.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+
+  deploy-pages:
+    name: Deploy to GitHub Pages
+    needs: build-pages
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
