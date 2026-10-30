@@ -433,10 +433,14 @@ Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi is
 - [ ] `recipes/` ötesindeki repo ve taban imaj tag kontrollerini araştır.
 - [ ] Desteklenen yeni taban repoların otomatik keşfini değerlendir.
 - [ ] Manifestler veya paylaşılan bildirimsel bileşenlerle tekrarlanan recipe yapılandırmasını azalt.
+- [ ] Maybe refactor current `build-tuxedo.sh` logic.
+  - [ ] kernel-devel -> kernel-devel-matched
+  - [ ] akmods kulanmak?
+  - [ ] tüm recipe'larda daha iyi uyumluluk için koji çalıştırılabilir kernel-devel kullanmak?  
 - [ ] Donanım testlerini genişlet ve doğrulanan dizüstü bilgisayar modellerini belgele.
-- [ ] Kendi "https://ghcr-badge.domain.example" adresini oluştur.
+- [X] Kendi "https://ghcr-badge.domain.example" adresini oluştur. (daha iyi badge sistemi için)
 - [ ] `ghrc-badge` projesine katkı olarak Tarih desteği ekle (onlar birleştirene kadar kendi fork'unda kullan).
-- [ ] Readme'nin tablolarına tarih sütunları ekle.
+- [ ] Readme'nin tablolarına tarih sütunları ekle (kendi fork'una bunu yapabilecek özellik ekledikten sonra).
 
 ## Teşekkürler
 
