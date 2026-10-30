@@ -38,4 +38,6 @@ modules:
       enabled:
         - tccd.service
 
+  - type: initramfs
+
   - type: signing

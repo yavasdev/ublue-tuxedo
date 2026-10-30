@@ -61,4 +61,6 @@ modules:
   # Rebuilds the initramfs to include the new modprobe file.
   - type: initramfs  
 
+  - type: initramfs
+
   - type: signing
