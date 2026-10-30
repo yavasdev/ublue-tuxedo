@@ -1,3 +1,5 @@
+<meta name="google-site-verification" content="7plxI9J4gy4xZL4KgJW1PPY-M4DJgyxxEqQnsrL4ktg" />
+
 # uBlue Tuxedo
 
 ### TUXEDO ve Clevo dizüstü bilgisayarları için Universal Blue imajları
