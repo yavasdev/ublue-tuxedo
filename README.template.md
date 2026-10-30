@@ -367,7 +367,7 @@ The badge links are static, while their displayed version and publication date c
 - [ ] Evaluate automatic discovery of new supported base repositories.
 - [ ] Reduce repeated recipe configuration with manifests or shared declarative components.
 - [ ] Maybe refactor current `build-tuxedo.sh` logic.
-  - [ ] kernel-devel -> kernel-devel-matched
+  - [X] kernel-devel -> kernel-devel-matched
   - [ ] using akmods?
   - [ ] using koji executable kernel-devel with all recipes for better compatibility  
 - [ ] Expand hardware testing and document confirmed laptop models.

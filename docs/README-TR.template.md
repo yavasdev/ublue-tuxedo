@@ -434,7 +434,7 @@ Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi is
 - [ ] Desteklenen yeni taban repoların otomatik keşfini değerlendir.
 - [ ] Manifestler veya paylaşılan bildirimsel bileşenlerle tekrarlanan recipe yapılandırmasını azalt.
 - [ ] Maybe refactor current `build-tuxedo.sh` logic.
-  - [ ] kernel-devel -> kernel-devel-matched
+  - [X] kernel-devel -> kernel-devel-matched
   - [ ] akmods kulanmak?
   - [ ] tüm recipe'larda daha iyi uyumluluk için koji çalıştırılabilir kernel-devel kullanmak?  
 - [ ] Donanım testlerini genişlet ve doğrulanan dizüstü bilgisayar modellerini belgele.
