@@ -48,6 +48,7 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
 #### En Son Sürüm imajları
 
 ##### Bazzite İmajları
+
 | İmaj | En son Sürüm İmajlar | Boyut |
 | --- | --- | --- |
 | [`bazzite-deck-gnome-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) | [![En son sürüm](https://ublue-badge-server.yavas.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) |
@@ -65,6 +66,7 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
 | [`bazzite-tuxedo`](https://ghcr.io/yavasdev/bazzite-tuxedo) | [![En son sürüm](https://ublue-badge-server.yavas.dev/yavasdev/bazzite-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/bazzite-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bazzite-tuxedo) |
 
 ##### Bluefin İmajları
+
 | İmaj | En son sürüm | Boyut |
 | --- | --- | --- |
 | [`bluefin-dx-nvidia-tuxedo`](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![En son sürüm](https://ublue-badge-server.yavas.dev/yavasdev/bluefin-dx-nvidia-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/bluefin-dx-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) |
@@ -75,6 +77,7 @@ Registry paketini açabilirsiniz. İmaj tanımlarının yetkili kaynağı
 | [`utah-tuxedo`](https://ghcr.io/yavasdev/utah-tuxedo) | [![En son sürüm](https://ublue-badge-server.yavas.dev/yavasdev/utah-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/utah-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/utah-tuxedo) |
 
 ##### Aurora İmajları
+
 | İmaj | En son sürüm | Boyut |
 | --- | --- | --- |
 | [`aurora-tuxedo`](https://ghcr.io/yavasdev/aurora-tuxedo) | [![En son sürüm](https://ublue-badge-server.yavas.dev/yavasdev/aurora-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/aurora-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/aurora-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/aurora-tuxedo) |

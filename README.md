@@ -41,6 +41,7 @@ Builds run automatically every day. Each badge shows the latest published tag an
 3. Use `stable` for daily use when it is available; use `latest` for the newest build and `testing` for early validation.
 
 ### Bazzite Images
+
 | Image | Latest versions | Size |
 | --- | --- | --- |
 | [`bazzite-deck-gnome-nvidia-tuxedo`](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/bazzite-deck-gnome-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bazzite-deck-gnome-nvidia-tuxedo) |
@@ -58,6 +59,7 @@ Builds run automatically every day. Each badge shows the latest published tag an
 | [`bazzite-tuxedo`](https://ghcr.io/yavasdev/bazzite-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/bazzite-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bazzite-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/bazzite-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bazzite-tuxedo) |
 
 ##### Bluefin Images
+
 | Image | Latest versions | Size |
 | --- | --- | --- |
 | [`bluefin-dx-nvidia-tuxedo`](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/bluefin-dx-nvidia-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/bluefin-dx-nvidia-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/bluefin-dx-nvidia-tuxedo) |
@@ -68,6 +70,7 @@ Builds run automatically every day. Each badge shows the latest published tag an
 | [`utah-tuxedo`](https://ghcr.io/yavasdev/utah-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/utah-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/utah-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/utah-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/utah-tuxedo) |
 
 ##### Aurora Images
+
 | Image | Latest versions | Size |
 | --- | --- | --- |
 | [`aurora-tuxedo`](https://ghcr.io/yavasdev/aurora-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/aurora-tuxedo/tags?label=release&ignore=*-*-*,*sha*,stable,latest,testing&n=3)](https://ghcr.io/yavasdev/aurora-tuxedo) | [![Latest version](https://ublue-badge-server.yavas.dev/yavasdev/aurora-tuxedo/size?color=%2326a269&tag=stable&label=latest+image+size)](https://ghcr.io/yavasdev/aurora-tuxedo) |
