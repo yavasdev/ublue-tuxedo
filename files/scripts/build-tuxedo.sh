@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# BlueBuild's initramfs module expects this standard temporary directory.
+install -d -m 1777 /var/tmp
+
 echo "=========================================="
 echo "1. Compiling Tuxedo Drivers from Source"
 echo "=========================================="
