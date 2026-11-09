@@ -51,6 +51,7 @@ modules:
         # adding personal packages
         - micro
         - igt-gpu-tools
+        - code # latest vscode
 
   - type: script
     scripts:
