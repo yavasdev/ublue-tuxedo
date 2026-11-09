@@ -48,6 +48,9 @@ modules:
         - wget
         - cpio
         - kernel-devel-matched
+        # adding personal packages
+        - micro
+        - igt-gpu-tools
 
   - type: script
     scripts:
