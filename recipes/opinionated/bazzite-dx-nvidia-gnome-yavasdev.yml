@@ -65,8 +65,9 @@ modules:
   # installing my custom programs after the tccd part is done.
   - type: dnf
     repos:
-      copr:
-        - techtoboggan/claude-desktop-hardened
+    copr:
+        - name: techtoboggan/claude-desktop-hardened
+          chroot: fedora-44-x86_64
       files:
         - vscode.repo
     install:
