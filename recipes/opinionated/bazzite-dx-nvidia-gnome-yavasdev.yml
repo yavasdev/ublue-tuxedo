@@ -5,6 +5,7 @@ name: bazzite-dx-nvidia-gnome-yavasdev
 description: Bazzite DX Nvidia Gnome with Tuxedo drivers and Control Center and some custom settings.
 # basically I added tuxedo drivers like others do but also fixed the lutris
 # with uninstalling system lutris and adding flatpak lutris to system scope.
+# this is my custom image for my personal use, I add and remove stuff, Im not responsible of anything changes here. 
 
 alt-tags:
   - stable
@@ -31,12 +32,13 @@ modules:
         install:
           - net.lutris.Lutris
 
+  # uncomment if you want to add lutris flatpak path
   - type: files
     files:
-      # uncomment if you want to add lutris flatpak path
       - source: opinionated/system/usr/bin/lutris
         destination: /usr/bin/lutris
 
+  # build requirements
   - type: dnf
     install:
       packages:
@@ -48,20 +50,34 @@ modules:
         - wget
         - cpio
         - kernel-devel-matched
-        # adding personal packages
-        - micro
-        - igt-gpu-tools
-        - code # latest vscode
 
+  # adding tccd system files to our image
   - type: script
     scripts:
       - build-tuxedo.sh
 
+  # enabling the tccd service
   - type: systemd
     system:
       enabled:
         - tccd.service
 
+  # installing my custom programs after the tccd part is done.
+  - type: dnf
+    repos:
+      copr:
+        - techtoboggan/claude-desktop-hardened
+      files:
+        - vscode.repo
+    install:
+      packages:
+        - micro
+        - igt-gpu-tools
+        - code # latest vscode
+        - claude-desktop-hardened # rpm repo for claude desktop that created from "techtoboggan/claude-desktop-hardened"
+
+  # regenerating initframfs
   - type: initramfs
 
+  # signing the image
   - type: signing
