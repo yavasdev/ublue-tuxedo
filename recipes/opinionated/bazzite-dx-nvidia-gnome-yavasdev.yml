@@ -64,18 +64,18 @@ modules:
 
   # installing my custom programs after the tccd part is done.
   - type: dnf
-    repos:
-    copr:
-      - name: techtoboggan/claude-desktop-hardened
-        chroot: fedora-44-x86_64
-    files:
-        - vscode.repo
-    install:
-      packages:
-        - micro
-        - igt-gpu-tools
-        - code # latest vscode
-        - claude-desktop-hardened # rpm repo for claude desktop that created from "techtoboggan/claude-desktop-hardened"
+      repos:
+        copr:
+          - name: techtoboggan/claude-desktop-hardened
+            chroot: fedora-44-x86_64
+        files:
+          - vscode.repo
+      install:
+        packages:
+          - micro
+          - igt-gpu-tools
+          - code # latest vscode
+          - claude-desktop-hardened # rpm repo for claude desktop that created from "techtoboggan/claude-desktop-hardened"
 
   # regenerating initframfs
   - type: initramfs
