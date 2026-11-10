@@ -66,9 +66,9 @@ modules:
   - type: dnf
     repos:
     copr:
-        - name: techtoboggan/claude-desktop-hardened
-          chroot: fedora-44-x86_64
-      files:
+      - name: techtoboggan/claude-desktop-hardened
+        chroot: fedora-44-x86_64
+    files:
         - vscode.repo
     install:
       packages:
