@@ -367,6 +367,8 @@ The badge links are static, while their displayed version and publication date c
 
 ## To-do
 
+- [ ] Take a look at these images and fix their problem: `utah-tuxedo`, `aurora-tuxedo` as this [thread](https://universal-blue.discourse.group/t/universal-blue-images-for-tuxedo-and-clevo-laptops/12599/5) said.
+- [ ] add tested images list to these: `bluefin-tuxedo`, `bazzite-gnome-tuxedo`, `bazzite-tuxedo` with credits to `CyberOto`
 - [ ] Add an upstream base-image update checker to skip unchanged builds.
 - [ ] Investigate repository and base-image tag checks beyond `recipes/`.
 - [ ] Evaluate automatic discovery of new supported base repositories.
@@ -379,6 +381,7 @@ The badge links are static, while their displayed version and publication date c
 - [X] Create your own "https://ghcr-badge.domain.example". (for better badge system)
 - [ ] Add Date support to `ghrc-badge` project as contribution (use it on your fork until they merge).
 - [ ] Add dates columns to readme's tables after create your own fork that capable of this.
+
 
 ## Credits
 
