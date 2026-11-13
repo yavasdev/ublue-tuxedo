@@ -22,6 +22,12 @@ on:
       - "recipes/opinionated/**"
 
   workflow_dispatch:
+    inputs:
+      recipe_pattern:
+        description: 'Derlemek istediğiniz recipe deseni (örn: *, bazzite*, aurora.yml)'
+        required: false
+        default: '*'
+        type: string
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
@@ -39,8 +45,13 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - id: find-recipes
+        env:
+          PATTERN: ${{ inputs.recipe_pattern || '*' }}
         run: |
-          matrix=$(find recipes -maxdepth 3 -type f \( -name '*.yml' -o -name '*.yaml' \) \
+          CLEAN_PATTERN="${PATTERN%.yml}"
+          CLEAN_PATTERN="${CLEAN_PATTERN%.yaml}"
+
+          matrix=$(find recipes -maxdepth 3 -type f \( -name "${CLEAN_PATTERN}.yml" -o -name "${CLEAN_PATTERN}.yaml" \) \
             ! -name 'recipe-example.yml' \
             ! -empty \
             ! -path 'recipes/opinionated/*' \
@@ -53,7 +64,7 @@ jobs:
 
           count=$(echo "$matrix" | jq '.recipe | length')
           if [ "$count" -eq 0 ]; then
-            echo "::error::No recipes found under recipes/!"
+            echo "::error::No recipes found under recipes/ Used pattern: '${PATTERN}'!"
             exit 1
           fi
 
