@@ -16,6 +16,7 @@ on:
       - ".github/workflows/build-opinionated.yml"
       - "recipes/opinionated/**"
       - "files/**"
+
   workflow_dispatch:
 
 concurrency:
