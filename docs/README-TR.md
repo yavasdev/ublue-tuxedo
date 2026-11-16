@@ -434,6 +434,8 @@ Badge bağlantıları statiktir, gösterdikleri sürüm ve yayımlanma tarihi is
 
 ## Yapılacaklar
 
+- [ ] Tüm projeyi Clean Code yöntemleriyle yeniden yaz: [örnek kullanım](https://gemini.google.com/app/5a4e5da2bca2476b)
+
 - [ ] Değişmeyen derlemeleri atlamak için bir upstream taban imaj güncelleme denetleyicisi ekle.
 - [ ] `recipes/` ötesindeki repo ve taban imaj tag kontrollerini araştır.
 - [ ] Desteklenen yeni taban repoların otomatik keşfini değerlendir.

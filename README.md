@@ -367,6 +367,8 @@ The badge links are static, while their displayed version and publication date c
 
 ## To-do
 
+- [ ] Rewrite entire project with clean code philosophy: [example](https://gemini.google.com/app/5a4e5da2bca2476b)
+
 - [ ] Take a look at these images and fix their problem: `utah-tuxedo`, `aurora-tuxedo` as this [thread](https://universal-blue.discourse.group/t/universal-blue-images-for-tuxedo-and-clevo-laptops/12599/5) said.
 - [ ] add tested images list to these: `bluefin-tuxedo`, `bazzite-gnome-tuxedo`, `bazzite-tuxedo` with credits to `CyberOto`
 - [ ] Add an upstream base-image update checker to skip unchanged builds.
