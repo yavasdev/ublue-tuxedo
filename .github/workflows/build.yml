@@ -12,14 +12,18 @@ on:
       - ".github/workflows/update-readme.yml"
       - ".github/workflows/build-opinionated.yml"
       - "recipes/opinionated/**"
+      - "files/system-custom/**"
   pull_request:
     branches:
       - main
     paths-ignore: # don't rebuild if only documentation have changed
       - "**.md"
       - "docs/**"
-      - ".github/workflows/*"
+      - ".github/workflows/clean.yml"
+      - ".github/workflows/update-readme.yml"
+      - ".github/workflows/build-opinionated.yml"
       - "recipes/opinionated/**"
+      - "files/system-custom/**"
 
   workflow_dispatch:
     inputs:
