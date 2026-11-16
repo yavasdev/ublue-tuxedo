@@ -35,7 +35,7 @@ modules:
   # uncomment if you want to add lutris flatpak path
   - type: files
     files:
-      - source: opinionated/system/usr/bin/lutris
+      - source: system-custom/usr/bin/lutris
         destination: /usr/bin/lutris
 
   # build requirements
@@ -76,6 +76,10 @@ modules:
         - igt-gpu-tools
         - code # latest vscode
         - claude-desktop-hardened # rpm repo for claude desktop that created from "techtoboggan/claude-desktop-hardened"
+
+  - type: script
+    scripts:
+      - antigravity-ide-install.sh
 
   # regenerating initframfs
   - type: initramfs
