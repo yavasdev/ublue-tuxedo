@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete Old Images
-        uses: dataaxiom/ghcr-cleanup-action@v1.2.2
+        uses: dataaxiom/ghcr-cleanup-action@v1.3.0
         with:
           # --- Authentication ---
           # Use a PAT instead of GITHUB_TOKEN. Deleting packages in GitHub Container Registry (GHCR)
